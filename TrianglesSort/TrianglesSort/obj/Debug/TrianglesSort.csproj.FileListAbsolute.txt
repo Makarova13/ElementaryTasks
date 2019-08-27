@@ -1,0 +1,10 @@
+C:\Users\user\softserve\Tasks\TrianglesSort\TrianglesSort\bin\Debug\TrianglesSort.exe.config
+C:\Users\user\softserve\Tasks\TrianglesSort\TrianglesSort\bin\Debug\TrianglesSort.exe
+C:\Users\user\softserve\Tasks\TrianglesSort\TrianglesSort\bin\Debug\TrianglesSort.pdb
+C:\Users\user\softserve\Tasks\TrianglesSort\TrianglesSort\obj\Debug\TrianglesSort.csproj.CoreCompileInputs.cache
+C:\Users\user\softserve\Tasks\TrianglesSort\TrianglesSort\obj\Debug\TrianglesSort.csproj.CopyComplete
+C:\Users\user\softserve\Tasks\TrianglesSort\TrianglesSort\obj\Debug\TrianglesSort.exe
+C:\Users\user\softserve\Tasks\TrianglesSort\TrianglesSort\obj\Debug\TrianglesSort.pdb
+C:\Users\user\softserve\Tasks\TrianglesSort\TrianglesSort\bin\Debug\TasksHelper.dll
+C:\Users\user\softserve\Tasks\TrianglesSort\TrianglesSort\bin\Debug\TasksHelper.pdb
+C:\Users\user\softserve\Tasks\TrianglesSort\TrianglesSort\obj\Debug\TrianglesSort.csprojAssemblyReference.cache

@@ -1,0 +1,5 @@
+﻿enum TicketType
+{
+    Moskow,
+    Piter
+}
