@@ -13,29 +13,29 @@ namespace LuckyTicket
 
         #region properties
 
-        [Required]
         protected int[] Number { get; set; }  //TODO: check the number
-
-        protected bool IsLucky { get; set; }
-
-        TicketType Type { get; set; }
 
         #endregion
 
-        public static TicketType GetTicketType(string str)
+        public static bool TryGetAlgorithm(string str, out ProcessTicket process)
         {
-            if (str.Equals("Piter"))
+            str = str.ToUpper();
+            if (str.Equals("PITER"))
             {
-                return TicketType.Piter;
+                process = PiterTicket.CheckIfLucky;
+                return true;
             }
-            if (str.Equals("Moskow"))
+            if (str.Equals("MOSKOW"))
             {
-                return TicketType.Moskow;
+                process = MoskowTicket.CheckIfLucky;
+                return true;
             }
             else
             {
-                throw new FormatException(Messages.ERROR_FILE_BEGINING);
+                process = null;
+                return false;
             }
         }
+
     }
 }

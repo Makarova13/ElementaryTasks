@@ -7,12 +7,35 @@ using TasksHelper;
 
 namespace LuckyTicket
 {
+    delegate bool ProcessTicket(int[] number);
+
     class Program
     {
         static void Main(string[] args)
         {
-            ConsoleUI.ShowMessage(Messages.ENTER_PATH);
-            string path = ConsoleUI.ReadLine();
+            string path;
+
+            if (!(TicketValidator.CheckArgs(args) && (Ticket.TryGetAlgorithm(args[0], out ProcessTicket process))))
+            {
+                ConsoleUI.ShowMessage(Messages.HELP);
+            }
+            else
+            {
+                ConsoleUI.ShowMessage(Messages.ENTER_PATH);
+
+                path = ConsoleUI.ReadLine();
+
+                if (!Validator.CheckPath(path)) 
+                {
+                    ConsoleUI.ShowMessage(Messages.ERROR_WRONG_PATH);
+                }
+                else
+                {
+                    WorkWithFile.ReadAndCount(path, process);
+                }
+            }
+
+            ConsoleUI.Pause();
         }
     }
 }

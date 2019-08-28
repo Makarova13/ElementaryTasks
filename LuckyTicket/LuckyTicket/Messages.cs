@@ -8,9 +8,20 @@ namespace LuckyTicket
 {
     class Messages
     {
-        public static string ERROR_NUMBER_OF_DIGITS = string.Format("Ticket number must be {0} digits.", Ticket.THE_NUMBER_OF_DIGITS);
-        public const string ERROR_FORMAT = "Ticket's number must contain only digits.";
+        #region messages
+
         public const string ENTER_PATH = "Please enter the path to your file:  ";
-        public const string ERROR_FILE_BEGINING = "File must begin with type of tickets('Piter' or 'Moskow')";
+        public const string HELP = "You should enter the type of ticket as argument.";
+
+        #endregion
+
+        #region errors
+
+        public static string ERROR_NUMBER_OF_DIGITS = string.Format("Ticket number must have {0} digits.", Ticket.THE_NUMBER_OF_DIGITS);
+        public const string ERROR_NUMBER_FORMAT = "Ticket's number must contain only digits.";
+        public const string ERROR_WRONG_PATH = "Wrong path.";
+
+        #endregion       
+        
     }
 }

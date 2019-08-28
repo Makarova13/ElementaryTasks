@@ -13,7 +13,6 @@ namespace TasksHelper
             arrInt = new int[arrLength];
             if(arrLength != str.Length - startIndex)
             {
-                Console.WriteLine("Wrong format! Enter name and side lengths separated by commas.");
                 return false;
             }
 
