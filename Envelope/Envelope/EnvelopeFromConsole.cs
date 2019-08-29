@@ -7,23 +7,21 @@ using TasksHelper;
 
 namespace Envelope
 {
-    class EnvelopeUI
+    class EnvelopeFromConsole: IEnvelopeCreate
     {
-        public static Envelope CreateEnvelopeFromConsole(string mes)
+        public Envelope CreateEnvelope()
         {
-            ConsoleUI.ShowMessage(mes);
-
-            double a = GetDouble(StringConsts.ENTER_LENGTH);
-            double b = GetDouble(StringConsts.ENTER_WIDTH);
+            float a = GetFloat(StringConsts.ENTER_LENGTH);
+            float b = GetFloat(StringConsts.ENTER_WIDTH);
 
             return new Envelope(a, b);
         }
 
-        public static double GetDouble(string mes)
+        private static float GetFloat(string mes)
         {
             while (true)
             {
-                if (!Validator.TryGetDouble(mes, out double a))
+                if (!float.TryParse(ConsoleUI.ReadLine(), out float a))
                 {
                     ConsoleUI.ShowMessage(StringConsts.WRONG_FORMAT_ERROR);
                 }

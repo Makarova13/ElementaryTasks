@@ -48,13 +48,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Envelope.cs" />
-    <Compile Include="EnvelopeUI.cs" />
+    <Compile Include="EnvelopeFromArgs.cs" />
+    <Compile Include="EnvelopeFromConsole.cs" />
+    <Compile Include="IEnvelopeCreate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringConsts.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="EnvelopesClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

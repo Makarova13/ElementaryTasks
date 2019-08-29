@@ -10,7 +10,7 @@ namespace Envelope
 {
     class Envelope
     {
-        public Envelope(double length, double width)
+        public Envelope(float length, float width)
         {
             if (width > length)
             {
@@ -23,9 +23,9 @@ namespace Envelope
 
         #region properties
 
-        public double Length { get; }
+        public float Length { get; }
 
-        public double Width { get; }
+        public float Width { get; }
 
         #endregion
 

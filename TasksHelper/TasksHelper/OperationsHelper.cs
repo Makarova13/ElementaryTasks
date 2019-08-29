@@ -15,9 +15,9 @@ namespace TasksHelper
             b = y;
         }
 
-        public static void Swipe(ref double a, ref double b)
+        public static void Swipe(ref float a, ref float b)
         {
-            double y = a;
+            float y = a;
             a = b;
             b = y;
         }

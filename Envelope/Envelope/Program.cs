@@ -11,12 +11,12 @@ namespace Envelope
     {
         static void Main(string[] args)
         {
-            do
+            if (args.Length == 4 && Validator.ArgsAreInt(args))
             {
-                ConsoleUI.Clear();
-
-                Envelope en1 = EnvelopeUI.CreateEnvelopeFromConsole(StringConsts.FIRST_ENVELOPE);
-                Envelope en2 = EnvelopeUI.CreateEnvelopeFromConsole(StringConsts.SECOND_ENVELOPE);
+                IEnvelopeCreate fromArgs = new EnvelopeFromArgs(args[0], args[1]);
+                Envelope en1 = fromArgs.CreateEnvelope();
+                fromArgs = new EnvelopeFromArgs(args[3], args[4]);
+                Envelope en2 = fromArgs.CreateEnvelope();
 
                 en1.CanPutInEnvelope += ConsoleUI.ShowMessage;
                 en1.CanPutIn(en2);
@@ -24,8 +24,28 @@ namespace Envelope
                 ConsoleUI.AskContinue(StringConsts.CONTINUE);
 
                 en1.CanPutInEnvelope -= ConsoleUI.ShowMessage;
+            }
+            
+            IEnvelopeCreate fromConsole = new EnvelopeFromConsole();
 
-            } while (ConsoleUI.WannaContinue);          
+
+            while (ConsoleUI.WannaContinue) ;
+            {
+                ConsoleUI.Clear();
+
+                ConsoleUI.ShowMessage(StringConsts.FIRST_ENVELOPE);
+                Envelope en1 = fromConsole.CreateEnvelope();
+
+                ConsoleUI.ShowMessage(StringConsts.SECOND_ENVELOPE);
+                Envelope en2 = fromConsole.CreateEnvelope();
+
+                en1.CanPutInEnvelope += ConsoleUI.ShowMessage;
+                en1.CanPutIn(en2);
+
+                ConsoleUI.AskContinue(StringConsts.CONTINUE);
+
+                en1.CanPutInEnvelope -= ConsoleUI.ShowMessage;
+            }
         }
     }
 }

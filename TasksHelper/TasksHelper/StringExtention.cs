@@ -20,7 +20,6 @@ namespace TasksHelper
             {
                 if(!int.TryParse(str[j], out arrInt[i]))
                 {
-                    Console.WriteLine("Number {0} entered in an incorrect format.", i);
                     return false;
                 }                    
             }

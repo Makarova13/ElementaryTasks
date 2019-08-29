@@ -3,7 +3,6 @@ C:\Users\user\softserve\Tasks\TasksHelper\TasksHelper\bin\Debug\TasksHelper.pdb
 C:\Users\user\softserve\Tasks\TasksHelper\TasksHelper\obj\Debug\TasksHelper.csproj.CoreCompileInputs.cache
 C:\Users\user\softserve\Tasks\TasksHelper\TasksHelper\obj\Debug\TasksHelper.dll
 C:\Users\user\softserve\Tasks\TasksHelper\TasksHelper\obj\Debug\TasksHelper.pdb
-C:\softserve\Tasks\TasksHelper\TasksHelper\obj\Debug\TasksHelper.csprojAssemblyReference.cache
 C:\softserve\Tasks\TasksHelper\TasksHelper\obj\Debug\TasksHelper.csproj.CoreCompileInputs.cache
 C:\softserve\Tasks\TasksHelper\TasksHelper\obj\Debug\TasksHelper.dll
 C:\softserve\Tasks\TasksHelper\TasksHelper\obj\Debug\TasksHelper.pdb

@@ -9,11 +9,16 @@ namespace TasksHelper
 {
     public class Validator
     {
-        public static bool TryGetDouble(string message, out double a)
+        public static bool ArgsAreInt(string[] str)
         {
-            Console.WriteLine(message);
-
-            return double.TryParse(Console.ReadLine(), out a);           
+            foreach(string s in str)
+            {
+                if(!int.TryParse(s, out int a))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         public static bool IsPositive(double a)
