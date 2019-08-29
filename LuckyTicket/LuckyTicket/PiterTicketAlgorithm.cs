@@ -25,14 +25,7 @@ namespace LuckyTicket
                 }
             }
 
-            if (oddSum == evenSum)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return (oddSum == evenSum);
         }
     }
 }

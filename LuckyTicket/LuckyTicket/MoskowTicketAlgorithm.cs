@@ -30,14 +30,7 @@ namespace LuckyTicket
                 rightSum += number[i];
             }
 
-            if (rightSum == leftSum)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return (rightSum == leftSum);
         }
     }
 }
