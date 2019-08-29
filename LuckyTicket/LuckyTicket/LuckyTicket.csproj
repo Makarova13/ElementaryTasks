@@ -47,17 +47,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICheckIfLucky.cs" />
     <Compile Include="Messages.cs" />
-    <Compile Include="MoskowTicket.cs" />
-    <Compile Include="PiterTicket.cs" />
+    <Compile Include="MoskowTicketAlgorithm.cs" />
+    <Compile Include="PiterTicketAlgorithm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ticket.cs" />
-    <Compile Include="TicketValidator.cs" />
+    <Compile Include="TicketAnalyser.cs" />
+    <Compile Include="TicketType.cs" />
     <Compile Include="WorkWithFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

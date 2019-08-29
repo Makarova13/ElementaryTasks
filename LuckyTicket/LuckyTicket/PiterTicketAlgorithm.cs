@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace LuckyTicket
 {
-    class PiterTicket : Ticket
+    class PiterTicketAlgorithm: ICheckIfLucky
     {
-        public static bool CheckIfLucky(int[] number)
+        public bool CheckIfLucky(byte[] number)
         {
-            int oddSum = 0;
-            int evenSum = 0;
+            uint oddSum = 0;
+            uint evenSum = 0;
 
-            for (int i = THE_NUMBER_OF_DIGITS - 1; i > 0; i--)
+            for (int i = number.Length - 1; i >= 0; i--)
             {
                 if (number[i] % 2 == 0) 
                 {

@@ -1,0 +1,5 @@
+C:\softserve\Tasks\LuckyTicket\ForTests\piter.txt
+C:\softserve\Tasks\LuckyTicket\ForTests\moskow3.txt
+C:\softserve\Tasks\LuckyTicket\ForTests\moskowERROR.txt
+C:\softserve\Tasks\LuckyTicket\ForTests\noType.txt
+C:\softserve\Tasks\LuckyTicket\ForTests\errorInNumber.txt

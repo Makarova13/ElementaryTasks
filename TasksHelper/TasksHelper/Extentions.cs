@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TasksHelper
 {
-    public static class StringExtention
+    public static class Extentions
     {
         public static bool GetInt(this string[] str, int arrLength, int startIndex, out int[] arrInt)
         {
@@ -22,6 +22,24 @@ namespace TasksHelper
                 {
                     return false;
                 }                    
+            }
+            return true;
+        }
+
+        public static bool TryGetByteArr(this char[] str, int arrLength, out byte[] arrByte, int startIndex = 0)
+        {
+            arrByte = new byte[arrLength];
+            if (arrLength != str.Length - startIndex)
+            {
+                return false;
+            }
+
+            for (int i = 0, j = startIndex; i < arrLength; i++, j++)
+            {
+                if (!byte.TryParse(str[j].ToString(), out arrByte[i]))
+                {
+                    return false;
+                }
             }
             return true;
         }

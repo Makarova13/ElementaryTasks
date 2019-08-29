@@ -1,37 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TasksHelper;
 
 namespace LuckyTicket
 {
-    delegate bool ProcessTicket(int[] number);
-
     class Program
     {
         static void Main(string[] args)
         {
             string path;
 
-            if (!(TicketAnalyser.TryGetAlgorithm(args[0], out ProcessTicket process)))
+            ConsoleUI.ShowMessage(Messages.ENTER_PATH);
+
+            path = ConsoleUI.ReadLine();
+
+            int countOfLucky = 0;
+
+            if (!Validator.CheckPath(path))
             {
-                ConsoleUI.ShowMessage(Messages.HELP);
+                ConsoleUI.ShowMessage(Messages.ERROR_WRONG_PATH);
             }
             else
             {
-                ConsoleUI.ShowMessage(Messages.ENTER_PATH);
-
-                path = ConsoleUI.ReadLine();
-
-                if (!Validator.CheckPath(path)) 
+                try
                 {
-                    ConsoleUI.ShowMessage(Messages.ERROR_WRONG_PATH);
+                    countOfLucky = WorkWithFile.CountLucky(path);
+                    ConsoleUI.ShowMessage($"Count of lucky tickets: {countOfLucky}");
                 }
-                else
+                catch (FormatException ex)
                 {
-                    WorkWithFile.ReadAndCount(path, process);
+                    ConsoleUI.ShowMessage(ex.Message);
                 }
             }
 

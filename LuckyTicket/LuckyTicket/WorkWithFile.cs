@@ -10,25 +10,37 @@ namespace LuckyTicket
 {
     class WorkWithFile
     {      
-        public static int ReadAndCount(string path, ProcessTicket CheckTicket)
+        public static int CountLucky(string path)
         {
             int countOfLucky = 0;
             string line;
+            char[] charArr;
 
             using (StreamReader file = new StreamReader(path, Encoding.Default))
             {
+                Enum.TryParse(file.ReadLine(), out TicketType ticketType);
+                
+                TicketAnalyser ticketAnalyser = new TicketAnalyser();
+
+                if((ticketAnalyser.Algorithm = ticketAnalyser.GetAlgorithm(ticketType)) == null)
+                {
+                    throw new FormatException(Messages.ERROR_NO_ALGORITHM);
+                }
+
                 while ((line = file.ReadLine()) != null)
                 {
-                    if (line.Split().GetInt(TicketAnalyser.THE_NUMBER_OF_DIGITS, 0, out int[] numbers))
+                    charArr = line.ToCharArray();
+
+                    if (charArr.TryGetByteArr(line.Length, out byte[] numbers))
                     {
-                        if (CheckTicket(numbers))
+                        if (ticketAnalyser.Algorithm.CheckIfLucky(numbers))
                         {
                             countOfLucky++;
                         }
                     }
                     else
                     {
-                        ConsoleUI.ShowMessage(Messages.ERROR_NUMBER_FORMAT);
+                        throw new FormatException(Messages.ERROR_NUMBER_FORMAT);
                     }
                 }
             }

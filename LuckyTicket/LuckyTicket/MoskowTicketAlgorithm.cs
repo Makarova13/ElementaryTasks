@@ -6,15 +6,21 @@ using System.Threading.Tasks;
 
 namespace LuckyTicket
 {
-    class MoskowTicket : Ticket
+    class MoskowTicketAlgorithm: ICheckIfLucky
     {
-        public static bool CheckIfLucky(int[] number)
+        public const int THE_NUMBER_OF_DIGITS = 6;
+
+        public bool CheckIfLucky(byte[] number)
         {
-            int leftSum = 0;
-            int rightSum = 0;
+            if(number.Length != THE_NUMBER_OF_DIGITS)
+            {
+                throw new FormatException();
+            }
+            uint leftSum = 0;
+            uint rightSum = 0;
             int middle = THE_NUMBER_OF_DIGITS / 2;
 
-            for (int i = middle - 1; i > 0; i--)
+            for (int i = middle - 1; i >= 0; i--)
             {
                 leftSum += number[i];
             }
