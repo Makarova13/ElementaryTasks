@@ -15,7 +15,7 @@ namespace LuckyTicket
         {
             string path;
 
-            if (!(TicketValidator.CheckArgs(args) && (Ticket.TryGetAlgorithm(args[0], out ProcessTicket process))))
+            if (!(TicketAnalyser.TryGetAlgorithm(args[0], out ProcessTicket process)))
             {
                 ConsoleUI.ShowMessage(Messages.HELP);
             }

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using TasksHelper;
 
 
@@ -21,7 +18,10 @@ namespace TrianglesSort
             {
                 if (TrangleUI.GetTriangle(out name, out sides))
                 {
-                    triangles.AddTriangle(name, sides);
+                    if(!triangles.AddTriangle(name, sides))
+                    {
+                        ConsoleUI.ShowMessage(StrConsts.DOESNT_EXIST);
+                    }
                 }
                 ConsoleUI.AskContinue(StrConsts.CONTINUE);
 

@@ -9,7 +9,7 @@ namespace Envelope
 {
     class EnvelopeUI
     {
-        public static Envelope CreateEnvelope(string mes)
+        public static Envelope CreateEnvelopeFromConsole(string mes)
         {
             ConsoleUI.ShowMessage(mes);
 

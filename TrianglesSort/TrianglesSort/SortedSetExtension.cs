@@ -1,24 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TasksHelper;
+﻿using System.Collections.Generic;
 
 namespace TrianglesSort
 {
     static class SortedSetExtension
     {
-        public static void AddTriangle(this SortedSet<Triangle> list, string name, int[] sides)
+        public static bool AddTriangle(this SortedSet<Triangle> list, string name, int[] sides)
         {
-
             if (Triangle.IsTriangleExists(sides[0], sides[1], sides[2]))
             {
                 list.Add(new Triangle(name, sides[0], sides[1], sides[2]));
+                return true;
             }
             else
             {
-                ConsoleUI.ShowMessage(StrConsts.DOESNT_EXIST);
+                return false;
             }
         }
     }

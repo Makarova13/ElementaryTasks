@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LuckyTicket
 {
-    abstract class Ticket
+    abstract class TicketAnalyser
     {
         public const int THE_NUMBER_OF_DIGITS = 6;
 

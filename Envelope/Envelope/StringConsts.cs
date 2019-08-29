@@ -17,6 +17,8 @@ namespace Envelope
         public const string FIRST_ENVELOPE = "__First envelope__";
         public const string SECOND_ENVELOPE = "__Second envelope__";
         public const string CONTINUE = "Do you want to check another envelopes?  ";
+        public const string NONE_ENVELOPE = "No envelope can be put in in another.";
+        public const string EQUAL_ENVELOPE = "Envelopes are equal.";
 
         #endregion
 

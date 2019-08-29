@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TasksHelper;
+﻿using TasksHelper;
 
 namespace TrianglesSort
 {
@@ -16,8 +11,9 @@ namespace TrianglesSort
             ConsoleUI.ShowMessage(StrConsts.INPUT_TRIANGLE);
             string[] triangle = ConsoleUI.ReadLine(',');
             name = triangle[0];
+            int beginInStringFrom = 1;
 
-            return triangle.GetInt(NUMBER_OF_SIDES, 1, out sides);  // 1 is the index of symbol in string array which tells where is the int's begining
+            return triangle.GetInt(NUMBER_OF_SIDES, beginInStringFrom, out sides); 
         }
     }
 }

@@ -19,7 +19,7 @@ namespace LuckyTicket
             {
                 while ((line = file.ReadLine()) != null)
                 {
-                    if (line.Split().GetInt(Ticket.THE_NUMBER_OF_DIGITS, 0, out int[] numbers))
+                    if (line.Split().GetInt(TicketAnalyser.THE_NUMBER_OF_DIGITS, 0, out int[] numbers))
                     {
                         if (CheckTicket(numbers))
                         {
