@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LuckyTicket
 {
@@ -14,8 +10,9 @@ namespace LuckyTicket
         {
             if(number.Length != THE_NUMBER_OF_DIGITS)
             {
-                throw new FormatException();
+                throw new FormatException(Messages.ERROR_NUMBER_OF_DIGITS);
             }
+
             uint leftSum = 0;
             uint rightSum = 0;
             int middle = THE_NUMBER_OF_DIGITS / 2;

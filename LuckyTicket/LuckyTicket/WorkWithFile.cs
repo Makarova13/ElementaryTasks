@@ -9,23 +9,25 @@ using TasksHelper;
 namespace LuckyTicket
 {
     class WorkWithFile
-    {      
-        public static int CountLucky(string path)
-        {
-            int countOfLucky = 0;
-            string line;
-            char[] charArr;
+    {
+        int countOfLucky = 0;
+        string line;
+        char[] charArr;
 
+        TicketValidator validator = new TicketValidator();
+
+        public int CountLucky(string path)
+        {           
             using (StreamReader file = new StreamReader(path, Encoding.Default))
             {
                 Enum.TryParse(file.ReadLine(), out TicketType ticketType);
-                
-                TicketAnalyser ticketAnalyser = new TicketAnalyser();
 
-                if((ticketAnalyser.Algorithm = ticketAnalyser.GetAlgorithm(ticketType)) == null)
+                if (!validator.ValideType(ticketType))
                 {
                     throw new FormatException(Messages.ERROR_NO_ALGORITHM);
                 }
+
+                TicketAnalyser ticketAnalyser = new TicketAnalyser(ticketType);
 
                 while ((line = file.ReadLine()) != null)
                 {
@@ -33,7 +35,7 @@ namespace LuckyTicket
 
                     if (charArr.TryGetByteArr(line.Length, out byte[] numbers))
                     {
-                        if (ticketAnalyser.Algorithm.CheckIfLucky(numbers))
+                        if (ticketAnalyser.CheckIfLucky(numbers))
                         {
                             countOfLucky++;
                         }

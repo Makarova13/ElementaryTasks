@@ -4,28 +4,25 @@ namespace LuckyTicket
 {
     class TicketAnalyser
     {
-        public const int THE_NUMBER_OF_DIGITS = 6;
-
-        public ICheckIfLucky Algorithm { get; set; }
-
-        public ICheckIfLucky GetAlgorithm(TicketType ticketType)
+        public TicketAnalyser(TicketType ticketType)
         {
             switch (ticketType)
             {
                 case TicketType.Moskow:
-                    return new MoskowTicketAlgorithm();
+                    Algorithm = new MoskowTicketAlgorithm();
+                    break;
 
                 case TicketType.Piter:
-                    return new PiterTicketAlgorithm();
-
-                default:
-                    return null;
+                    Algorithm = new PiterTicketAlgorithm();
+                    break;
             }
         }
 
-        internal bool CheckIfLucky(byte[] numbers)
+        public ICheckIfLucky Algorithm { private get; set; }
+
+        public bool CheckIfLucky(byte[] numbers)
         {
-            throw new NotImplementedException();
+            return Algorithm.CheckIfLucky(numbers);
         }
     }
 }
