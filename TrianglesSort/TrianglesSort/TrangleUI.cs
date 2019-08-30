@@ -2,14 +2,21 @@
 
 namespace TrianglesSort
 {
-    class TrangleUI
+    class TriangleUI
     {
         const int NUMBER_OF_SIDES = 3;
 
-        public static bool GetTriangle(out string name, out int[] sides)
+        public IUserInterface UI { get; }
+
+        public TriangleUI(IUserInterface ui)
         {
-            ConsoleUI.ShowMessage(StrConsts.INPUT_TRIANGLE);
-            string[] triangle = ConsoleUI.ReadLine(',');
+            UI = ui;
+        }
+
+        public bool GetTriangle(out string name, out int[] sides)
+        {
+            UI.ShowMessage(StrConsts.INPUT_TRIANGLE);
+            string[] triangle = UI.ReadLine(',');
             name = triangle[0];
             int beginInStringFrom = 1;
 

@@ -47,6 +47,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application.cs" />
     <Compile Include="ICheckIfLucky.cs" />
     <Compile Include="Messages.cs" />
     <Compile Include="MoskowTicketAlgorithm.cs" />

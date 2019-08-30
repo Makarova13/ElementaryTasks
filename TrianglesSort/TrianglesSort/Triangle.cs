@@ -24,7 +24,7 @@ namespace TrianglesSort
         public double Side3 { get; set; }
         public string Name { get; set; }
 
-        public double Square
+        public double Area
         {
             get
             {
@@ -59,7 +59,7 @@ namespace TrianglesSort
             if (obj is Triangle)
             {
                 Triangle tr = (Triangle)obj;
-                return Square.CompareTo(tr.Square);
+                return Area.CompareTo(tr.Area);
             }
             else
             {
@@ -69,7 +69,7 @@ namespace TrianglesSort
 
         public override string ToString()
         {
-            string triangleStr = string.Format("Name: {0}, Area: {1}", Name, Square);
+            string triangleStr = string.Format("Name: {0}, Area: {1}", Name, Area);
             return triangleStr;
         }
     }

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace TasksHelper
 {
-    public class ConsoleUI
+    public class ConsoleUI: IUserInterface
     {
-        public static bool WannaContinue = true;
+        public bool WannaContinue { get; set; }
 
-        public static void AskContinue(string str)
+        public void AskContinue(string str)
         {
             Console.Write(str);
             string answ = Console.ReadLine().ToLower();
@@ -18,7 +18,7 @@ namespace TasksHelper
             WannaContinue = (answ.Equals("yes") || answ.Equals("y"));
         }
 
-        public static void ShowMessage(string m)
+        public void ShowMessage(string m)
         {
             Console.WriteLine(m);
         }
@@ -31,17 +31,17 @@ namespace TasksHelper
             return int.TryParse(Console.ReadLine(), out min) && int.TryParse(Console.ReadLine(), out max);
         }
 
-        public static void ShowIntList(List<int> list)
+        public void ShowIntList(List<int> list)
         {
             Console.WriteLine(string.Join<int>(",", list));
         }
 
-        public static void Clear()
+        public void Clear()
         {
             Console.Clear();
         }
 
-        public static void ShowCollection<T, K>(T col) where T : IEnumerable<K>
+        public void ShowCollection<T, K>(T col) where T : IEnumerable<K>
         {
             foreach (K i in col)
             {
@@ -49,18 +49,18 @@ namespace TasksHelper
             }
         }
 
-        public static void Pause()
+        public void Pause()
         {
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }
 
-        public static string[] ReadLine(char c)
+        public string[] ReadLine(char c)
         {
             return Console.ReadLine().Split(c);
         }
 
-        public static string ReadLine()
+        public string ReadLine()
         {
             return Console.ReadLine();
         }
