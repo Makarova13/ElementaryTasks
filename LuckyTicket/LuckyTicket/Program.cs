@@ -10,7 +10,6 @@ namespace LuckyTicket
             string path;
             ConsoleUI.ShowMessage(Messages.ENTER_PATH);
             path = ConsoleUI.ReadLine();
-            int countOfLucky = 0;
 
             if (!Validator.CheckPath(path))
             {
@@ -21,8 +20,8 @@ namespace LuckyTicket
                 try
                 {
                     WorkWithFile withFile = new WorkWithFile();
-                    countOfLucky = withFile.CountLucky(path);
-                    ConsoleUI.ShowMessage($"Count of lucky tickets: {countOfLucky}");
+                    withFile.CountLucky(path);
+                    ConsoleUI.ShowMessage($"Count of lucky tickets: {withFile.CountOfLucky}");
                 }
                 catch (FormatException ex)
                 {

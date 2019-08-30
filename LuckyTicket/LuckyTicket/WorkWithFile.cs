@@ -10,13 +10,13 @@ namespace LuckyTicket
 {
     class WorkWithFile
     {
-        int countOfLucky = 0;
-        string line;
-        char[] charArr;
-
+        public int CountOfLucky { get; private set; } = 0;
         TicketValidator validator = new TicketValidator();
 
-        public int CountLucky(string path)
+        private string line;
+        private char[] charArr;      
+
+        public void CountLucky(string path)
         {           
             using (StreamReader file = new StreamReader(path, Encoding.Default))
             {
@@ -37,7 +37,7 @@ namespace LuckyTicket
                     {
                         if (ticketAnalyser.CheckIfLucky(numbers))
                         {
-                            countOfLucky++;
+                            CountOfLucky++;
                         }
                     }
                     else
@@ -46,9 +46,8 @@ namespace LuckyTicket
                     }
                 }
             }
-
-            return countOfLucky;
         }
+
 
     }
 }
