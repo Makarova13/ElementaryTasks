@@ -17,7 +17,7 @@ namespace Envelope
             return new Envelope(a, b);
         }
 
-        private static float GetFloat(string mes)
+        private float GetFloat(string mes)
         {
             while (true)
             {

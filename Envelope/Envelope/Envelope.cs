@@ -14,7 +14,7 @@ namespace Envelope
         {
             if (width > length)
             {
-                OperationsHelper.Swipe(ref width, ref length);
+                Operations.Swipe(ref width, ref length);
             }
 
             Length = length;

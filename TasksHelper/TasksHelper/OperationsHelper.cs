@@ -6,18 +6,11 @@ using System.Threading.Tasks;
 
 namespace TasksHelper
 {
-    public class OperationsHelper
+    public class Operations
     {
-        public static void Swipe(ref int a, ref int b)
+        public static void Swipe<T>(ref T a, ref T b)
         {
-            int y = a;
-            a = b;
-            b = y;
-        }
-
-        public static void Swipe(ref float a, ref float b)
-        {
-            float y = a;
+            T y = a;
             a = b;
             b = y;
         }
