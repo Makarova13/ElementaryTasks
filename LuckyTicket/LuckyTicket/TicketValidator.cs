@@ -8,17 +8,21 @@ namespace LuckyTicket
 {
     class TicketValidator
     {
-        public bool ValideType(TicketType ticketType)
+        public bool ValideType(TicketType ticketType, out ICheckIfLucky lucky)
         {
             switch (ticketType)
             {
                 case TicketType.Moskow:
+                    lucky = new MoskowTicketAlgorithm();
                     return true;
 
                 case TicketType.Piter:
+                    lucky = new PiterTicketAlgorithm();
                     return true;
 
-                default: return false;
+                default:
+                    lucky = null;
+                    return false;
             }
         }
     }

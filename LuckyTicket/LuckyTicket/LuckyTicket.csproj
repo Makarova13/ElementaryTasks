@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OperationsWithNums">
+      <HintPath>..\..\libs\OperationsWithNums\OperationsWithNums\bin\Debug\OperationsWithNums.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -45,23 +48,25 @@
     <Reference Include="TasksHelper">
       <HintPath>..\..\TasksHelper\TasksHelper\bin\Debug\TasksHelper.dll</HintPath>
     </Reference>
+    <Reference Include="UserInterface">
+      <HintPath>..\..\libs\UserInterface\UserInterface\bin\Debug\UserInterface.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application.cs" />
-    <Compile Include="ICheckIfLucky.cs" />
+    <Compile Include="ChooseAlgorithm\ICheckIfLucky.cs" />
     <Compile Include="Messages.cs" />
-    <Compile Include="MoskowTicketAlgorithm.cs" />
-    <Compile Include="PiterTicketAlgorithm.cs" />
+    <Compile Include="ChooseAlgorithm\MoskowTicketAlgorithm.cs" />
+    <Compile Include="ChooseAlgorithm\PiterTicketAlgorithm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TicketAnalyser.cs" />
-    <Compile Include="TicketType.cs" />
+    <Compile Include="ChooseAlgorithm\TicketAnalyser.cs" />
+    <Compile Include="ChooseAlgorithm\TicketType.cs" />
     <Compile Include="TicketValidator.cs" />
-    <Compile Include="WorkWithFile.cs" />
+    <Compile Include="Counter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

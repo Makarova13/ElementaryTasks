@@ -2,9 +2,11 @@ C:\softserve\Tasks\LuckyTicket\LuckyTicket\obj\Debug\LuckyTicket.csproj.CoreComp
 C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\LuckyTicket.exe.config
 C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\LuckyTicket.exe
 C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\LuckyTicket.pdb
-C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\TasksHelper.dll
-C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\TasksHelper.pdb
 C:\softserve\Tasks\LuckyTicket\LuckyTicket\obj\Debug\LuckyTicket.csproj.CopyComplete
 C:\softserve\Tasks\LuckyTicket\LuckyTicket\obj\Debug\LuckyTicket.exe
 C:\softserve\Tasks\LuckyTicket\LuckyTicket\obj\Debug\LuckyTicket.pdb
 C:\softserve\Tasks\LuckyTicket\LuckyTicket\obj\Debug\LuckyTicket.csprojAssemblyReference.cache
+C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\OperationsWithNums.dll
+C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\UserInterface.dll
+C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\OperationsWithNums.pdb
+C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\UserInterface.pdb

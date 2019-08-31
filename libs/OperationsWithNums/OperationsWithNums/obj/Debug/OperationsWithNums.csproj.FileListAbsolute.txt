@@ -1,0 +1,6 @@
+C:\softserve\Tasks\libs\OperationsWithNums\OperationsWithNums\bin\Debug\OperationsWithNums.dll
+C:\softserve\Tasks\libs\OperationsWithNums\OperationsWithNums\bin\Debug\OperationsWithNums.pdb
+C:\softserve\Tasks\libs\OperationsWithNums\OperationsWithNums\obj\Debug\OperationsWithNums.csprojAssemblyReference.cache
+C:\softserve\Tasks\libs\OperationsWithNums\OperationsWithNums\obj\Debug\OperationsWithNums.csproj.CoreCompileInputs.cache
+C:\softserve\Tasks\libs\OperationsWithNums\OperationsWithNums\obj\Debug\OperationsWithNums.dll
+C:\softserve\Tasks\libs\OperationsWithNums\OperationsWithNums\obj\Debug\OperationsWithNums.pdb

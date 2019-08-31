@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TasksHelper;
+using UserInterface;
+using System.IO;
 
 namespace LuckyTicket
 {
     class Application
     {
         public IUserInterface UI { get; }
-        //public IValidate Validator { get; }
 
         public Application(IUserInterface ui)
         {
@@ -18,13 +14,13 @@ namespace LuckyTicket
             Run();
         }
 
-        public void Run()
+        private void Run()
         {
             string path;
             UI.ShowMessage(Messages.ENTER_PATH);
             path = UI.ReadLine();
 
-            if (!Validator.CheckPath(path))
+            if (!File.Exists(path))
             {
                 UI.ShowMessage(Messages.ERROR_WRONG_PATH);
             }
@@ -32,9 +28,9 @@ namespace LuckyTicket
             {
                 try
                 {
-                    WorkWithFile withFile = new WorkWithFile();
-                    withFile.CountLucky(path);
-                    UI.ShowMessage($"Count of lucky tickets: {withFile.CountOfLucky}");
+                    Counter counter = new Counter();
+                    counter.CountLucky(path);
+                    UI.ShowMessage($"Count of lucky tickets: {counter.ТгьиукOfLucky}");
                 }
                 catch (FormatException ex)
                 {

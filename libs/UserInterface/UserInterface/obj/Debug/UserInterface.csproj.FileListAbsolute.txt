@@ -1,0 +1,6 @@
+C:\softserve\Tasks\libs\UserInterface\UserInterface\bin\Debug\UserInterface.dll
+C:\softserve\Tasks\libs\UserInterface\UserInterface\bin\Debug\UserInterface.pdb
+C:\softserve\Tasks\libs\UserInterface\UserInterface\obj\Debug\UserInterface.csprojAssemblyReference.cache
+C:\softserve\Tasks\libs\UserInterface\UserInterface\obj\Debug\UserInterface.csproj.CoreCompileInputs.cache
+C:\softserve\Tasks\libs\UserInterface\UserInterface\obj\Debug\UserInterface.dll
+C:\softserve\Tasks\libs\UserInterface\UserInterface\obj\Debug\UserInterface.pdb
