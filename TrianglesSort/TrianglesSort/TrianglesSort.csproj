@@ -60,8 +60,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SortedSetExtension.cs" />
-    <Compile Include="StrConsts.cs" />
-    <Compile Include="TrangleUI.cs" />
+    <Compile Include="UI\StrConsts.cs" />
+    <Compile Include="UI\TrangleUI.cs" />
     <Compile Include="Triangle.cs" />
   </ItemGroup>
   <ItemGroup>

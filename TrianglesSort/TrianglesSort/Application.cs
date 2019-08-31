@@ -13,24 +13,23 @@ namespace TrianglesSort
             Run();
         }
 
-        public void Run()
+        private void Run()
         {
             SortedSet<Triangle> triangles = new SortedSet<Triangle>();
-
-            int[] sides;
-            string name;
-
             TriangleUI triangleUI = new TriangleUI(UI);
+
             do
             {
                 UI.Clear();
-                if (triangleUI.GetTriangle(out name, out sides))
+
+                if (triangleUI.GetTriangle(out string name, out int[] sides))
                 {
                     if (!triangles.AddTriangle(name, sides))
                     {
                         UI.ShowMessage(StrConsts.DOESNT_EXIST);
                     }
                 }
+
                 UI.AskContinue(StrConsts.CONTINUE);
 
             } while (UI.WannaContinue);
