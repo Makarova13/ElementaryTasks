@@ -11,10 +11,15 @@ C:\Users\user\softserve\Tasks\Envelope\Envelope\obj\Debug\Envelope.csprojAssembl
 C:\softserve\Tasks\Envelope\Envelope\bin\Debug\Envelope.exe.config
 C:\softserve\Tasks\Envelope\Envelope\bin\Debug\Envelope.exe
 C:\softserve\Tasks\Envelope\Envelope\bin\Debug\Envelope.pdb
-C:\softserve\Tasks\Envelope\Envelope\bin\Debug\TasksHelper.dll
 C:\softserve\Tasks\Envelope\Envelope\bin\Debug\TasksHelper.pdb
 C:\softserve\Tasks\Envelope\Envelope\obj\Debug\Envelope.csprojAssemblyReference.cache
 C:\softserve\Tasks\Envelope\Envelope\obj\Debug\Envelope.csproj.CoreCompileInputs.cache
 C:\softserve\Tasks\Envelope\Envelope\obj\Debug\Envelope.csproj.CopyComplete
 C:\softserve\Tasks\Envelope\Envelope\obj\Debug\Envelope.exe
 C:\softserve\Tasks\Envelope\Envelope\obj\Debug\Envelope.pdb
+C:\softserve\Tasks\Envelope\Envelope\bin\Debug\OperationsWithNums.dll
+C:\softserve\Tasks\Envelope\Envelope\bin\Debug\UserInterface.dll
+C:\softserve\Tasks\Envelope\Envelope\bin\Debug\Validator.dll
+C:\softserve\Tasks\Envelope\Envelope\bin\Debug\OperationsWithNums.pdb
+C:\softserve\Tasks\Envelope\Envelope\bin\Debug\UserInterface.pdb
+C:\softserve\Tasks\Envelope\Envelope\bin\Debug\Validator.pdb

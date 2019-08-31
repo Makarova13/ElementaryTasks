@@ -17,15 +17,16 @@ namespace Envelope
         public const string FIRST_ENVELOPE = "__First envelope__";
         public const string SECOND_ENVELOPE = "__Second envelope__";
         public const string CONTINUE = "Do you want to check another envelopes?  ";
-        public const string NONE_ENVELOPE = "No envelope can be put in in another.";
+        public const string NONE_ENVELOPE = "None envelope can be put in in another.";
         public const string EQUAL_ENVELOPE = "Envelopes are equal.";
+        public const string INSTRUCTION = "To check envelopes you can start the app with their lengths and widths as arguments.";
 
         #endregion
 
         #region errors
 
-        public const string WRONG_FORMAT_ERROR = "You shold write a float number here.";
-        public const string NEGATIVE_NUM_ERROR = "You shold write a positive number.";
+        public const string WRONG_FORMAT_ERROR = "You should write a float number here.";
+        public const string NEGATIVE_NUM_ERROR = "You should write a positive number.";
 
         #endregion
     }

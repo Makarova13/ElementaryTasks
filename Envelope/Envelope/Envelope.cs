@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-using TasksHelper;
+using OperationsWithNums;
 
 namespace Envelope
 {
@@ -34,7 +34,7 @@ namespace Envelope
 
         public void CanPutIn(Envelope en)
         {
-            if (!this.Equals(en))
+            if (!Equals(en))
             {
                 if (this < en)
                 {

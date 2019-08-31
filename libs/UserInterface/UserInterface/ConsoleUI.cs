@@ -5,7 +5,7 @@ namespace UserInterface
 {
     public class ConsoleUI : IUserInterface
     {
-        public bool WannaContinue { get; set; }
+        public bool WannaContinue { get; set; } = true;
 
         public void AskContinue(string str)
         {
