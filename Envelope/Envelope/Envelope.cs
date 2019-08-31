@@ -29,8 +29,7 @@ namespace Envelope
 
         #endregion
 
-        public delegate void CanPutInEnvelopeEventHandler(string message);
-        public event CanPutInEnvelopeEventHandler CanPutInEnvelope;
+        public event Action<string> CanPutInEnvelope;
 
         public void CanPutIn(Envelope en)
         {
