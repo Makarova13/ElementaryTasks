@@ -45,7 +45,7 @@ namespace TrianglesSort
             return Math.Sqrt(p * (p - a) * (p - b) * (p - c));
         }
 
-        public static bool IsTriangleExists(double a, double b, double c)
+        public static bool IsTriangleExist(double a, double b, double c)
         {
             return ((a + b > c) && (b + c > a) && (a + c) > b);
         }

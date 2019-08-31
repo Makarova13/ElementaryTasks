@@ -22,11 +22,19 @@ namespace TrianglesSort
             {
                 UI.Clear();
 
-                if (triangleUI.GetTriangle(out string name, out int[] sides))
+                if (!triangleUI.GetTriangle(out string name, out int[] sides))
                 {
-                    if (!triangles.AddTriangle(name, sides))
+                    UI.ShowMessage(StrConsts.FORMAT_ERROR);                
+                }
+                else
+                {
+                    if (!Triangle.IsTriangleExist(sides[0], sides[1], sides[2])) 
                     {
                         UI.ShowMessage(StrConsts.DOESNT_EXIST);
+                    }
+                    else
+                    {
+                        triangles.Add(new Triangle(name, sides[0], sides[1], sides[2]));
                     }
                 }
 
