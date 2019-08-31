@@ -11,10 +11,13 @@ C:\Users\user\softserve\Tasks\TrianglesSort\TrianglesSort\obj\Debug\TrianglesSor
 C:\softserve\Tasks\TrianglesSort\TrianglesSort\bin\Debug\TrianglesSort.exe.config
 C:\softserve\Tasks\TrianglesSort\TrianglesSort\bin\Debug\TrianglesSort.exe
 C:\softserve\Tasks\TrianglesSort\TrianglesSort\bin\Debug\TrianglesSort.pdb
-C:\softserve\Tasks\TrianglesSort\TrianglesSort\bin\Debug\TasksHelper.dll
 C:\softserve\Tasks\TrianglesSort\TrianglesSort\bin\Debug\TasksHelper.pdb
 C:\softserve\Tasks\TrianglesSort\TrianglesSort\obj\Debug\TrianglesSort.csprojAssemblyReference.cache
 C:\softserve\Tasks\TrianglesSort\TrianglesSort\obj\Debug\TrianglesSort.csproj.CoreCompileInputs.cache
 C:\softserve\Tasks\TrianglesSort\TrianglesSort\obj\Debug\TrianglesSort.csproj.CopyComplete
 C:\softserve\Tasks\TrianglesSort\TrianglesSort\obj\Debug\TrianglesSort.exe
 C:\softserve\Tasks\TrianglesSort\TrianglesSort\obj\Debug\TrianglesSort.pdb
+C:\softserve\Tasks\TrianglesSort\TrianglesSort\bin\Debug\OperationsWithNums.dll
+C:\softserve\Tasks\TrianglesSort\TrianglesSort\bin\Debug\UserInterface.dll
+C:\softserve\Tasks\TrianglesSort\TrianglesSort\bin\Debug\OperationsWithNums.pdb
+C:\softserve\Tasks\TrianglesSort\TrianglesSort\bin\Debug\UserInterface.pdb

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OperationsWithNums">
+      <HintPath>..\..\libs\OperationsWithNums\OperationsWithNums\bin\Debug\OperationsWithNums.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -47,6 +50,9 @@
     </Reference>
     <Reference Include="TasksHelper">
       <HintPath>..\..\TasksHelper\TasksHelper\bin\Debug\TasksHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="UserInterface">
+      <HintPath>..\..\libs\UserInterface\UserInterface\bin\Debug\UserInterface.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

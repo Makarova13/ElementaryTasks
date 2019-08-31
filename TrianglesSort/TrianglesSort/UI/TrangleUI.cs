@@ -1,4 +1,5 @@
-﻿using TasksHelper;
+﻿using UserInterface;
+using OperationsWithNums;
 
 namespace TrianglesSort
 {
