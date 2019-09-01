@@ -1,0 +1,14 @@
+C:\softserve\Tasks\NumSequences\NumSequences\bin\Debug\NumSequences.exe.config
+C:\softserve\Tasks\NumSequences\NumSequences\bin\Debug\NumSequences.exe
+C:\softserve\Tasks\NumSequences\NumSequences\bin\Debug\NumSequences.pdb
+C:\softserve\Tasks\NumSequences\NumSequences\bin\Debug\OperationsWithNums.dll
+C:\softserve\Tasks\NumSequences\NumSequences\bin\Debug\UserInterface.dll
+C:\softserve\Tasks\NumSequences\NumSequences\bin\Debug\Validator.dll
+C:\softserve\Tasks\NumSequences\NumSequences\bin\Debug\OperationsWithNums.pdb
+C:\softserve\Tasks\NumSequences\NumSequences\bin\Debug\UserInterface.pdb
+C:\softserve\Tasks\NumSequences\NumSequences\bin\Debug\Validator.pdb
+C:\softserve\Tasks\NumSequences\NumSequences\obj\Debug\NumSequences.csprojAssemblyReference.cache
+C:\softserve\Tasks\NumSequences\NumSequences\obj\Debug\NumSequences.csproj.CoreCompileInputs.cache
+C:\softserve\Tasks\NumSequences\NumSequences\obj\Debug\NumSequences.csproj.CopyComplete
+C:\softserve\Tasks\NumSequences\NumSequences\obj\Debug\NumSequences.exe
+C:\softserve\Tasks\NumSequences\NumSequences\obj\Debug\NumSequences.pdb

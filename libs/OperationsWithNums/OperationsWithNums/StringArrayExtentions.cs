@@ -26,6 +26,20 @@ namespace OperationsWithNums
             return true;
         }
 
+        public static bool GetInt(this string[] str, out int[] arrInt)
+        {
+            arrInt = new int[str.Length];
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (!int.TryParse(str[i], out arrInt[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         public static bool TryGetByteArr(this char[] str, int arrLength, out byte[] arrByte, int startIndex = 0)
         {
             arrByte = new byte[arrLength];

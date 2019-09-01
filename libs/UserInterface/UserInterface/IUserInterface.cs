@@ -8,6 +8,8 @@ namespace UserInterface
 
         void AskContinue(string str);
         void ShowMessage(string m);
+        void ShowNum(int m);
+        void Show(string m);
         void ShowIntList(List<int> list);
         void Clear();
         void ShowCollection<T, K>(T col) where T : IEnumerable<K>;

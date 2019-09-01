@@ -20,6 +20,16 @@ namespace UserInterface
             Console.WriteLine(m);
         }
 
+        public void ShowNum(int m)
+        {
+            Console.Write(m);
+        }
+
+        public void Show(string m)
+        {
+            Console.Write(m);
+        }
+
         public void ShowIntList(List<int> list)
         {
             Console.WriteLine(string.Join<int>(",", list));
