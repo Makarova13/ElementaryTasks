@@ -14,14 +14,14 @@ namespace TrianglesSort
             UI = ui;
         }
 
-        public bool GetTriangle(out string name, out int[] sides)
+        public bool GetTriangle(out string name, out float[] sides)
         {
             UI.ShowMessage(StrConsts.INPUT_TRIANGLE);
             string[] triangle = UI.ReadLine(',');
             name = triangle[0];
             int beginInStringFrom = 1;
 
-            return triangle.GetInt(NUMBER_OF_SIDES, beginInStringFrom, out sides); 
+            return triangle.GetFloat(NUMBER_OF_SIDES, beginInStringFrom, out sides); 
         }
     }
 }

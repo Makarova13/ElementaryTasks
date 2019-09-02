@@ -5,7 +5,7 @@ namespace TrianglesSort
 {
     class Triangle : IComparable
     {
-        public Triangle(string name, double x, double y, double z)
+        public Triangle(string name, float x, float y, float z)
         {
             Side1 = x;
             Side2 = y;
@@ -15,12 +15,12 @@ namespace TrianglesSort
 
         #region properties
 
-        public double Side1 { get; set; }
-        public double Side2 { get; set; }
-        public double Side3 { get; set; }
+        public float Side1 { get; set; }
+        public float Side2 { get; set; }
+        public float Side3 { get; set; }
         public string Name { get; set; }
 
-        public double Area
+        public float Area
         {
             get
             {
@@ -28,7 +28,7 @@ namespace TrianglesSort
             }
         }
 
-        public double Perimeter
+        public float Perimeter
         {
             get
             {
@@ -38,14 +38,14 @@ namespace TrianglesSort
 
         #endregion
 
-        public static double HeronArea(double a, double b, double c)
+        public static float HeronArea(float a, float b, float c)
         {
-            double p = (a + b + c) / 2.0;
+            float p = (a + b + c) / 2.0;
 
             return Math.Sqrt(p * (p - a) * (p - b) * (p - c));
         }
 
-        public static bool IsTriangleExist(double a, double b, double c)
+        public static bool IsTriangleExist(float a, float b, float c)
         {
             return ((a + b > c) && (b + c > a) && (a + c) > b);
         }

@@ -22,7 +22,7 @@ namespace TrianglesSort
             {
                 UI.Clear();
 
-                if (!triangleUI.GetTriangle(out string name, out int[] sides))
+                if (!triangleUI.GetTriangle(out string name, out float[] sides))
                 {
                     UI.ShowMessage(StrConsts.FORMAT_ERROR);                
                 }

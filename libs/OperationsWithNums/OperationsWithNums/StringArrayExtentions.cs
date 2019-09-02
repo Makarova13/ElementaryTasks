@@ -40,6 +40,20 @@ namespace OperationsWithNums
             return true;
         }
 
+        public static bool GetFloat(this string[] str, out float[] arr)
+        {
+            arr = new float[str.Length];
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (!float.TryParse(str[i], out arr[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         public static bool TryGetByteArr(this char[] str, int arrLength, out byte[] arrByte, int startIndex = 0)
         {
             arrByte = new byte[arrLength];
@@ -51,6 +65,24 @@ namespace OperationsWithNums
             for (int i = 0, j = startIndex; i < arrLength; i++, j++)
             {
                 if (!byte.TryParse(str[j].ToString(), out arrByte[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool GetFloat(this string[] str, int arrLength, int startIndex, out float[] arr)
+        {
+            arr = new float[arrLength];
+            if (arrLength != str.Length - startIndex)
+            {
+                return false;
+            }
+
+            for (int i = 0, j = startIndex; i < arrLength; i++, j++)
+            {
+                if (!float.TryParse(str[j], out arr[i]))
                 {
                     return false;
                 }
