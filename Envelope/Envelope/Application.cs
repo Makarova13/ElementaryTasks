@@ -7,6 +7,7 @@ namespace Envelope
     class Application
     {       
         private EnvelopeCreator creator;
+
         private NumValidator validator;
 
         public Application(IUserInterface ui)

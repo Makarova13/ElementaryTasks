@@ -9,7 +9,7 @@ namespace LuckyTicket
     {
         #region Properties
 
-        public int ТгьиукOfLucky { get; private set; } = 0;
+        public int AmountOfLucky { get; private set; } = 0;
         private TicketValidator validator { get; set; }
 
         #endregion
@@ -52,7 +52,7 @@ namespace LuckyTicket
             {
                 if (ticketAnalyser.CheckIfLucky(numbers))
                 {
-                    ТгьиукOfLucky++;
+                    AmountOfLucky++;
                 }
             }
             else

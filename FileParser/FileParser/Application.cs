@@ -3,13 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UserInterface;
 using System.IO;
 
 namespace FileParser
 {
-    class Program
+    class Application
     {
-        static void Main(string[] args)
+        public IUserInterface UI { get; }
+
+        public Application(IUserInterface ui)
+        {
+            UI = ui;
+            Run();
+        }
+
+        private void Run()
         {
             string str = string.Empty;
             string toSearch = string.Empty;

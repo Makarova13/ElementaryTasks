@@ -30,7 +30,7 @@ namespace LuckyTicket
                 {
                     Counter counter = new Counter();
                     counter.CountLucky(path);
-                    UI.ShowMessage($"Count of lucky tickets: {counter.ТгьиукOfLucky}");
+                    UI.ShowMessage($"Count of lucky tickets: {counter.AmountOfLucky}");
                 }
                 catch (FormatException ex)
                 {

@@ -52,15 +52,13 @@ namespace TrianglesSort
 
         public int CompareTo(object obj)
         {
-            if (obj is Triangle)
+            if (!(obj is Triangle))
             {
-                Triangle tr = (Triangle)obj;
-                return Area.CompareTo(tr.Area);
+                throw new FormatException();             
             }
-            else
-            {
-                throw new Exception();
-            }
+            
+            Triangle tr = (Triangle)obj;
+            return Area.CompareTo(tr.Area);
         }
 
         public override string ToString()
