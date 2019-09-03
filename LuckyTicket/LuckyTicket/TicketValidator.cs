@@ -25,5 +25,22 @@ namespace LuckyTicket
                     return false;
             }
         }
+
+        public bool ValidateNumber(string str, Ticket ticket)
+        {
+            char[] charArr = str.ToCharArray();
+            int length = charArr.Length;
+            byte[] byteArr = new byte[length];
+
+            for (int i = 0; i < charArr.Length; i++)
+            {
+                if (!byte.TryParse(charArr[i].ToString(), out byteArr[i]))
+                {
+                    return false;
+                }
+            }
+            ticket.Number = byteArr;
+            return true;
+        }
     }
 }

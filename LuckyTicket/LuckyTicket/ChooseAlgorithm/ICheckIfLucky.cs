@@ -8,6 +8,6 @@ namespace LuckyTicket
 {
     interface ICheckIfLucky
     {
-        bool CheckIfLucky(byte[] arr);
+        void CheckIfLucky(Ticket number);
     }
 }

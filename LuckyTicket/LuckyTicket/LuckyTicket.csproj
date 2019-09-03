@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Application.cs" />
     <Compile Include="ChooseAlgorithm\ICheckIfLucky.cs" />
+    <Compile Include="ChooseAlgorithm\Ticket.cs" />
     <Compile Include="Messages.cs" />
     <Compile Include="ChooseAlgorithm\MoskowTicketAlgorithm.cs" />
     <Compile Include="ChooseAlgorithm\PiterTicketAlgorithm.cs" />

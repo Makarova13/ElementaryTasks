@@ -2,7 +2,7 @@
 {
     class PiterTicketAlgorithm: ICheckIfLucky
     {
-        public bool CheckIfLucky(byte[] number)
+        public void CheckIfLucky(Ticket number)
         {
             uint oddSum = 0;
             uint evenSum = 0;
@@ -19,7 +19,7 @@
                 }
             }
 
-            return (oddSum == evenSum);
+            number.IsLucky = (oddSum == evenSum);
         }
     }
 }

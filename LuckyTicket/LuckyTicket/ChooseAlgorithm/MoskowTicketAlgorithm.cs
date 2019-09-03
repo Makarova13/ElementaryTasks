@@ -6,7 +6,7 @@ namespace LuckyTicket
     {
         public const int THE_NUMBER_OF_DIGITS = 6;
 
-        public bool CheckIfLucky(byte[] number)
+        public void CheckIfLucky(Ticket number)
         {
             if(number.Length != THE_NUMBER_OF_DIGITS)
             {
@@ -27,7 +27,7 @@ namespace LuckyTicket
                 rightSum += number[i];
             }
 
-            return (rightSum == leftSum);
+             number.IsLucky = (rightSum == leftSum);
         }
     }
 }

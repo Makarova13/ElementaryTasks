@@ -19,12 +19,14 @@ namespace LuckyTicket
         private string line;
         private char[] charArr;
         private TicketAnalyser ticketAnalyser;
+        private Ticket ticket;
 
         #endregion
 
         public void CountLucky(string path)
         {
             validator = new TicketValidator();
+            ticket = new Ticket();
 
             using (StreamReader file = new StreamReader(path, Encoding.Default))
             {
@@ -35,30 +37,28 @@ namespace LuckyTicket
                     throw new FormatException(Messages.ERROR_NO_ALGORITHM);
                 }
 
-                ticketAnalyser = new TicketAnalyser(checkIfLucky);
+                ticketAnalyser = new TicketAnalyser(checkIfLucky, ticket);
 
                 while ((line = file.ReadLine()) != null)
                 {
-                    CheckLine(line);
+                    CountInLine(line);
                 }
             }
         }
 
-        private void CheckLine(string line)
+        private void CountInLine(string line)
         {
             charArr = line.ToCharArray();
 
-            if (charArr.TryGetByteArr(line.Length, out byte[] numbers))
+            if (validator.ValidateNumber(line, ticket))
             {
-                if (ticketAnalyser.CheckIfLucky(numbers))
+                ticketAnalyser.CheckIfLucky(ticket);
+                if (ticket.IsLucky)
                 {
                     AmountOfLucky++;
                 }
             }
-            else
-            {
-                throw new FormatException(Messages.ERROR_NUMBER_FORMAT);
-            }
         }
+
     }
 }

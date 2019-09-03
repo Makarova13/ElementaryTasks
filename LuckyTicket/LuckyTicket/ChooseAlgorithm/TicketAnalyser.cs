@@ -2,16 +2,19 @@
 {
     class TicketAnalyser
     {
-        public TicketAnalyser(ICheckIfLucky checkIfLucky)
+        public TicketAnalyser(ICheckIfLucky checkIfLucky, Ticket ticket)
         {
+            CurrentTicket = ticket;
             Algorithm = checkIfLucky;
         }
 
-        public ICheckIfLucky Algorithm { private get; set; }
+        private Ticket CurrentTicket { get; set; }
 
-        public bool CheckIfLucky(byte[] numbers)
+        private ICheckIfLucky Algorithm { get; set; }
+
+        public void CheckIfLucky(Ticket numbers)
         {
-            return Algorithm.CheckIfLucky(numbers);
+            Algorithm.CheckIfLucky(CurrentTicket);
         }
     }
 }
