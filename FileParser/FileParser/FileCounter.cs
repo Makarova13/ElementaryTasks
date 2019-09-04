@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace FileParser
 {
@@ -45,7 +42,7 @@ namespace FileParser
 
         public override string ToString()
         {
-            string str = string.Format($"Occurs of {new string(Pattern)}: {Counter}");
+            string str = string.Format($"Occurs of {Pattern}: {Counter}");
             return str;
         }
     }

@@ -64,7 +64,7 @@ namespace OperationsWithNums
 
             for (int i = 0, j = startIndex; i < arrLength; i++, j++)
             {
-                if (!byte.TryParse(str[j].ToString(), out arrByte[i]))
+                if (!byte.TryParse(str[j].ToString(), out arrByte[i])) 
                 {
                     return false;
                 }

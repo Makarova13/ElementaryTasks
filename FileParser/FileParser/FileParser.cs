@@ -12,15 +12,16 @@ namespace FileParser
         public FileParser(string path, string pattern)
         {
             Path = path;
-            Pattern = pattern.ToCharArray();
+            Pattern = pattern;
         }
 
         public string Path { get; private set; }
-        protected char[] Pattern { get; set; }
+        protected string Pattern { get; set; }
+        public StringBuilder Piece { get; set; }
 
         public abstract void ParsePiece(string text);          // Boyer-Moore
 
-        protected static void BadCharHeuristic(char[] str, int size, ref int[] badChar)
+        protected static void BadCharHeuristic(string str, int size, ref int[] badChar)
         {
             int i;
 
@@ -30,6 +31,9 @@ namespace FileParser
             for (i = 0; i < size; i++)
                 badChar[(int)str[i]] = i;
         }
+
+        public virtual void FinishWork()
+        {        }
 
         public override string ToString()
         {

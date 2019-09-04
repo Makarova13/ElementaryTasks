@@ -12,5 +12,7 @@ namespace FileParser
         public const string INFO = @"This app works in two modes. To find find the amount of occurs of the\n
                                      string in text, input path and pattern. To replace specific string\n
                                      in text, input path, search string and string to replace with.";
+
+        public const string REPLACED = "Work completed successfully";
     }
 }

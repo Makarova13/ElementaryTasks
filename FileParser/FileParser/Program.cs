@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using UserInterface;
 
@@ -10,8 +6,6 @@ namespace FileParser
 {
     class Program
     {
-        
-
         static void Main(string[] args)
         {
             ConsoleUI UI = new ConsoleUI();
@@ -23,10 +17,12 @@ namespace FileParser
             catch (FileNotFoundException ex)
             {
                 UI.ShowMessage(ex.Message);
+                UI.Pause();
             }
             catch (FormatException ex)
             {
                 UI.ShowMessage(ex.Message);
+                UI.Pause();
             }
         }
     }

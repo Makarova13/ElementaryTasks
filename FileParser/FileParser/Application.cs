@@ -26,27 +26,34 @@ namespace FileParser
             string toSearch = string.Empty;
 
             int count = 256;
-            char[] buf = new char[count];
+            char[] buf;
             int startPosition = 0;
+            byte[] bytes;
 
-            FileStream file = new FileStream(Parser.Path, FileMode.Open);
-            BinaryReader br = new BinaryReader(file);
+            FileStream file = new FileStream(Parser.Path, FileMode.Open, FileAccess.Read);
+            BufferedStream br = new BufferedStream(file);
 
             while (startPosition < file.Length)
             {
+                buf = new char[count];
+                bytes = new byte[count];
+
                 if (count > (file.Length - startPosition)) 
                 {
                     count = (int)file.Length - startPosition;
                 }
 
-                br.Read(buf, startPosition, count);
+                br.Read(bytes, 0, count);
+                buf = Encoding.UTF8.GetString(bytes).ToCharArray();
 
                 Parser.ParsePiece(new string(buf));
+
                 startPosition += count;
             }
-
             br.Dispose();
             file.Dispose();
+
+            Parser.FinishWork();
 
             UI.ShowMessage(Parser.ToString());
             UI.Pause();

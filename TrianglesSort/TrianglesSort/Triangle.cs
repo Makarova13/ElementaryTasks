@@ -3,7 +3,7 @@
 
 namespace TrianglesSort
 {
-    class Triangle : IComparable
+    class Triangle : IComparable<Triangle>
     {
         public Triangle(string name, float x, float y, float z)
         {
@@ -50,14 +50,8 @@ namespace TrianglesSort
             return ((a + b > c) && (b + c > a) && (a + c) > b);
         }
 
-        public int CompareTo(object obj)
-        {
-            if (!(obj is Triangle))
-            {
-                throw new FormatException();             
-            }
-            
-            Triangle tr = (Triangle)obj;
+        public int CompareTo(Triangle tr)
+        {            
             return Area.CompareTo(tr.Area);
         }
 
