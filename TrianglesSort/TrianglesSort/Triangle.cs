@@ -50,8 +50,14 @@ namespace TrianglesSort
             return ((a + b > c) && (b + c > a) && (a + c) > b);
         }
 
-        public int CompareTo(Triangle tr)
-        {            
+        public int CompareTo(Triangle obj)
+        {
+            if (!(obj is Triangle))
+            {
+                throw new FormatException();             
+            }
+            
+            Triangle tr = (Triangle)obj;
             return Area.CompareTo(tr.Area);
         }
 

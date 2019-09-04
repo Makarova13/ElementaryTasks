@@ -4,7 +4,7 @@ namespace LuckyTicket
 {
     class MoskowTicketAlgorithm: ICheckIfLucky
     {
-        public const int THE_NUMBER_OF_DIGITS = 6;
+        public const int THE_NUMBER_OF_DIGITS = 6;   //константу в тикет
 
         public void CheckIfLucky(Ticket number)
         {
