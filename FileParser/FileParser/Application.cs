@@ -11,10 +11,12 @@ namespace FileParser
     class Application
     {
         public IUserInterface UI { get; }
+        private FileParser Parser { get; set; }
 
-        public Application(IUserInterface ui)
+        public Application(IUserInterface ui, FileParser parser)
         {
             UI = ui;
+            Parser = parser;
             Run();
         }
 
@@ -22,15 +24,32 @@ namespace FileParser
         {
             string str = string.Empty;
             string toSearch = string.Empty;
-            int counter = 0;
 
-            using (StreamReader netStream = new StreamReader("iugv"))
+            int count = 256;
+            char[] buf = new char[count];
+            int startPosition = 0;
+
+            FileStream file = new FileStream(Parser.Path, FileMode.Open);
+            BinaryReader br = new BinaryReader(file);
+
+            while (startPosition < file.Length)
             {
-                while ((str = netStream.ReadLine()) != null)
+                if (count > (file.Length - startPosition)) 
                 {
-                    counter += StringSearcher.SearchString(str, toSearch).Length;
+                    count = (int)file.Length - startPosition;
                 }
+
+                br.Read(buf, startPosition, count);
+
+                Parser.ParsePiece(new string(buf));
+                startPosition += count;
             }
+
+            br.Dispose();
+            file.Dispose();
+
+            UI.ShowMessage(Parser.ToString());
+            UI.Pause();
         }
     }
 }

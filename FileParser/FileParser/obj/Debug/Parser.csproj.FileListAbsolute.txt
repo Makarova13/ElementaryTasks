@@ -1,0 +1,10 @@
+C:\softserve\Tasks\FileParser\FileParser\bin\Debug\FileParser.exe.config
+C:\softserve\Tasks\FileParser\FileParser\bin\Debug\FileParser.exe
+C:\softserve\Tasks\FileParser\FileParser\bin\Debug\FileParser.pdb
+C:\softserve\Tasks\FileParser\FileParser\bin\Debug\UserInterface.dll
+C:\softserve\Tasks\FileParser\FileParser\bin\Debug\UserInterface.pdb
+C:\softserve\Tasks\FileParser\FileParser\obj\Debug\Parser.csprojAssemblyReference.cache
+C:\softserve\Tasks\FileParser\FileParser\obj\Debug\Parser.csproj.CoreCompileInputs.cache
+C:\softserve\Tasks\FileParser\FileParser\obj\Debug\Parser.csproj.CopyComplete
+C:\softserve\Tasks\FileParser\FileParser\obj\Debug\FileParser.exe
+C:\softserve\Tasks\FileParser\FileParser\obj\Debug\FileParser.pdb

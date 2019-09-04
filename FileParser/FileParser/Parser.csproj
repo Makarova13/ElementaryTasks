@@ -46,11 +46,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlgorithmTemplate.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="FileParser.cs" />
     <Compile Include="Application.cs" />
+    <Compile Include="FileCounter.cs" />
+    <Compile Include="FileReplacer.cs" />
+    <Compile Include="ForArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringSearcher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

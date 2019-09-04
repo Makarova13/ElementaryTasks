@@ -4,23 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using UserInterface;
 
 namespace FileParser
 {
     class Program
     {
+        
+
         static void Main(string[] args)
         {
-            string str = string.Empty;
-            string toSearch = string.Empty;
-            int counter = 0;
+            ConsoleUI UI = new ConsoleUI();
 
-            using (StreamReader netStream = new StreamReader("iugv"))
+            try
             {
-                while ((str = netStream.ReadLine()) != null)
-                {
-                    counter += StringSearcher.SearchString(str, toSearch).Length;
-                }
+                ForArgs.WorkWithArgs(args);
+            }
+            catch (FileNotFoundException ex)
+            {
+                UI.ShowMessage(ex.Message);
+            }
+            catch (FormatException ex)
+            {
+                UI.ShowMessage(ex.Message);
             }
         }
     }
