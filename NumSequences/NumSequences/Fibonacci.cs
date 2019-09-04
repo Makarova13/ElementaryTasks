@@ -35,10 +35,10 @@ namespace NumSequences
 
         public IEnumerator<int> GetEnumerator()
         {
-            if (IsFibonacci(Min))
+            /*if (IsFibonacci(Min))
             {
                 currNum = Min;
-            }
+            }*/
 
             while (currNum <= Max) 
             {
