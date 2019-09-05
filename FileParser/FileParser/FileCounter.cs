@@ -26,7 +26,9 @@ namespace FileParser
                 int j = patternLen - 1;
 
                 while (j >= 0 && Pattern[j] == text[s + j])
+                {
                     --j;
+                }
 
                 if (j < 0)
                 {

@@ -50,6 +50,7 @@ namespace FileParser
 
                 startPosition += count;
             }
+
             br.Dispose();
             file.Dispose();
 

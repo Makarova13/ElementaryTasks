@@ -26,18 +26,17 @@ namespace FileParser
             int i;
 
             for (i = 0; i < 256; i++)
+            {
                 badChar[i] = -1;
+            }
 
             for (i = 0; i < size; i++)
+            {
                 badChar[(int)str[i]] = i;
+            }
         }
 
         public virtual void FinishWork()
         {        }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
     }
 }
