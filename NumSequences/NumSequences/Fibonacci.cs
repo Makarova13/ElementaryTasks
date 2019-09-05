@@ -35,11 +35,6 @@ namespace NumSequences
 
         public IEnumerator<int> GetEnumerator()
         {
-            /*if (IsFibonacci(Min))
-            {
-                currNum = Min;
-            }*/
-
             while (currNum <= Max) 
             {
                 if (currNum >= Min)
@@ -54,9 +49,5 @@ namespace NumSequences
             }          
         }
 
-        private bool IsFibonacci(int a)
-        {
-            return (Math.Sqrt(a * a * 5 + 4) % 1 == 0 || Math.Sqrt(a * a * 5 - 4) % 1 == 0);
-        }
     }
 }
