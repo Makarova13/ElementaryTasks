@@ -26,6 +26,7 @@ namespace NumSequences
                 UI.ShowNum(num);
                 UI.Show(", ");
             }
+
             UI.Pause();
         }
     }

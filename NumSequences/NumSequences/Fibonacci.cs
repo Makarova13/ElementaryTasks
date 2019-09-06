@@ -50,7 +50,6 @@ namespace NumSequences
                 nextNum = currNum + prevNum;
                 prevNum = currNum;
                 currNum = nextNum;
-                GetEnumerator();
             }          
         }
 
