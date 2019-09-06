@@ -8,6 +8,9 @@ namespace ChessBoard
 {
     class Cell
     {
-        
+        public int X { get; set; }
+        public int Y { get; set; }
+
+
     }
 }

@@ -19,12 +19,14 @@ namespace NumSequences
                 ui.ShowMessage(Constants.NOT_DIGITS);
                 ui.Pause();
             }
+
             else
             {
                 if(args.Length == 1)
                 {
                     new Application(ui, new LessThenSquaredNum(nums[0]));
                 }
+
                 if(args.Length == 2)
                 {
                     new Application(ui, new Fibonacci(nums[0], nums[1]));

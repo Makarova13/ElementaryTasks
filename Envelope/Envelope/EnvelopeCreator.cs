@@ -31,17 +31,19 @@ namespace Envelope
 
             while (true)
             {
-                if (!float.TryParse(UI.ReadLine(), out float a))
+                if (!float.TryParse(UI.ReadLine(), out float result))
                 {
                     UI.ShowMessage(StringConsts.WRONG_FORMAT_ERROR);
                 }
-                else if (!validator.IsPositive(a))
+
+                else if (!validator.IsPositive(result))
                 {
                     UI.ShowMessage(StringConsts.NEGATIVE_NUM_ERROR);
                 }
+
                 else
                 {
-                    return a;
+                    return result;
                 }
             }
         }

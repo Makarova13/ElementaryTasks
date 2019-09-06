@@ -8,6 +8,7 @@ namespace ChessBoard
 {
     interface IBoardView
     {
-        Board Paint();
+        void Paint(Board board);
+        void PutFigures(Board board);
     }
 }

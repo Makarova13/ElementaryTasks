@@ -10,18 +10,18 @@ namespace NumSequences
     class Application
     {
         private IUserInterface UI { get; }
-        private ICalculate Algorithm { get; }
+        private ICalculate Culculation { get; }
 
-        public Application(IUserInterface ui, ICalculate algorithm)
+        public Application(IUserInterface ui, ICalculate culculation)
         {
             UI = ui;
-            Algorithm = algorithm;
+            Culculation = culculation;
             Run();
         }
 
         private void Run()
         {
-            foreach (int num in Algorithm)
+            foreach (int num in Culculation)
             {
                 UI.ShowNum(num);
                 UI.Show(", ");

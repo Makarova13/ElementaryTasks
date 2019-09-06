@@ -10,6 +10,14 @@ namespace Envelope
 {
     class Envelope
     {
+        #region properties
+
+        public float Length { get; }
+
+        public float Width { get; }
+
+        #endregion
+
         public Envelope(float length, float width)
         {
             if (width > length)
@@ -20,14 +28,6 @@ namespace Envelope
             Length = length;
             Width = width;
         }
-
-        #region properties
-
-        public float Length { get; }
-
-        public float Width { get; }
-
-        #endregion
 
         public event Action<string> CanPutInEnvelope;
 
@@ -40,8 +40,7 @@ namespace Envelope
                     CanPutInEnvelope?.Invoke(StringConsts.FIRST_IN_SECOND);
                 }
 
-                else 
-                if (this > en)
+                else if (this > en)
                 {
                     CanPutInEnvelope?.Invoke(StringConsts.SECOND_IN_FIRST);
                 }
