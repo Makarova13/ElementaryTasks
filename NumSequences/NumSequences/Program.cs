@@ -14,7 +14,7 @@ namespace NumSequences
         {
             ConsoleUI ui = new ConsoleUI();
 
-            if(!args.GetInt(out int[] nums))
+            if(!args.TryGetIntArray(out int[] nums))
             {
                 ui.ShowMessage(Constants.NOT_DIGITS);
                 ui.Pause();

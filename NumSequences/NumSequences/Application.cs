@@ -9,8 +9,8 @@ namespace NumSequences
 {
     class Application
     {
-        public IUserInterface UI { get; }
-        public ICalculate Algorithm { get; }
+        private IUserInterface UI { get; }
+        private ICalculate Algorithm { get; }
 
         public Application(IUserInterface ui, ICalculate algorithm)
         {

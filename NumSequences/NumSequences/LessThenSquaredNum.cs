@@ -8,12 +8,13 @@ namespace NumSequences
 {
     class LessThenSquaredNum : ICalculate
     {
+
+        public int Max { get; private set; }
+
         public LessThenSquaredNum(int max)
         {
             Max = max;
         }
-
-        public int Max { get; private set; }
 
         public IEnumerator<int> GetEnumerator()
         {

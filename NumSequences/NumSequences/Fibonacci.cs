@@ -15,6 +15,13 @@ namespace NumSequences
 
         #endregion
 
+        #region properties
+
+        public int Min { get; }
+        public int Max { get; }
+
+        #endregion
+
         public Fibonacci(int min, int max)
         {
             if(min > max)
@@ -25,13 +32,6 @@ namespace NumSequences
             Min = min;
             Max = max;
         }
-
-        #region properties
-
-        public int Min { get; }
-        public int Max { get; }
-
-        #endregion
 
         public IEnumerator<int> GetEnumerator()
         {
