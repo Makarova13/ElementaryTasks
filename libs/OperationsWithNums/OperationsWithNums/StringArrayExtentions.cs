@@ -8,7 +8,7 @@ namespace OperationsWithNums
 {
     public static class StringArrayExtentions
     {
-        public static bool GetInt(this string[] str, int arrLength, int startIndex, out int[] arrInt)
+        public static bool TryGetIntArray(this string[] str, int arrLength, int startIndex, out int[] arrInt)
         {
             arrInt = new int[arrLength];
             if (arrLength != str.Length - startIndex)
@@ -26,7 +26,7 @@ namespace OperationsWithNums
             return true;
         }
 
-        public static bool GetInt(this string[] str, out int[] arrInt)
+        public static bool TryGetIntArray(this string[] str, out int[] arrInt)
         {
             arrInt = new int[str.Length];
 
@@ -40,7 +40,7 @@ namespace OperationsWithNums
             return true;
         }
 
-        public static bool GetFloat(this string[] str, out float[] arr)
+        public static bool TryGetFloatArray(this string[] str, out float[] arr)
         {
             arr = new float[str.Length];
 
@@ -72,7 +72,7 @@ namespace OperationsWithNums
             return true;
         }
 
-        public static bool GetFloat(this string[] str, int arrLength, int startIndex, out float[] arr)
+        public static bool TryGetFloatArray(this string[] str, int arrLength, int startIndex, out float[] arr)
         {
             arr = new float[arrLength];
             if (arrLength != str.Length - startIndex)
