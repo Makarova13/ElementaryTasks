@@ -8,7 +8,15 @@ namespace LuckyTicket
         {
             IUserInterface userInterface = new ConsoleUI();
 
-            new Application(userInterface);
+            if (args.Length != 1)
+            {
+                userInterface.ShowMessage(Messages.INSTRUCTION);
+                userInterface.Pause();
+            }
+            else
+            {
+                new Application(userInterface, args[0]);
+            }
         }
     }
 }

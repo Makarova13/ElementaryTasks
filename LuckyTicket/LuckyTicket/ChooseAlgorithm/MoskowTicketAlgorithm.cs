@@ -2,7 +2,7 @@
 
 namespace LuckyTicket
 {
-    class MoskowTicketAlgorithm: ICheckIfLucky
+    public class MoskowTicketAlgorithm: ICheckIfLucky
     {
         public void CheckIfLucky(Ticket number)
         {

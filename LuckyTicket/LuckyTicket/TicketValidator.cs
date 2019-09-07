@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace LuckyTicket
 {
-    class TicketValidator
+    public class TicketValidator
     {
-        public bool ValidateNumber(string str, Ticket ticket)
+        public static int ValidateRange(string str)
         {
-            char[] charArr = str.ToCharArray();
-            byte[] byteArr = new byte[Ticket.NumberLength];
-
-            for (int i = 0; i < charArr.Length; i++)
+            if (!int.TryParse(str, out int number))
             {
-                if (!byte.TryParse(charArr[i].ToString(), out byteArr[i]))
-                {
-                    return false;
-                }
+                throw new FormatException(Messages.ERROR_FORMAT);
             }
-            ticket.Number = byteArr;
-            return true;
+
+            if(str.Length != Ticket.NumberLength)
+            {
+                throw new FormatException(Messages.ERROR_DIGITS_NUMBER);
+            }
+
+            return number;
         }
     }
 }

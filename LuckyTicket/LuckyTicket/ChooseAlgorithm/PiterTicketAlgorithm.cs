@@ -7,8 +7,6 @@
 
         public void CheckIfLucky(Ticket number)
         {
-
-
             for (int i = Ticket.NumberLength - 1; i >= 0; i--)
             {
                 if (number[i] % 2 == 0) 

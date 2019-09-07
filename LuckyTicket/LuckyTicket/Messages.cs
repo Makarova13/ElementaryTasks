@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace LuckyTicket
 {
-    class Messages
+    public class Messages
     {
         #region messages
 
-        public const string ENTER_PATH = "Please enter the path to your file:  ";
+        public const string ENTER_MIN = "Please enter minimum ticket number:";
+        public const string ENTER_MAX = "Please enter maximum ticket number:";
+        public const string INSTRUCTION = "Path to the file with algorithm type must be indicated in ";
 
         #endregion
 
         #region errors
 
-        public const string ERROR_NUMBER_OF_DIGITS = "Moskow ticket number must have 6 digits.";
-        public const string ERROR_NUMBER_FORMAT = "Ticket's number must contain only digits.";
+        public const string ERROR_FORMAT = "Min and Max must contain only digits.";
+        public readonly static string ERROR_DIGITS_NUMBER = $"The ticket must have {Ticket.NumberLength} characters.";
         public const string ERROR_WRONG_PATH = "Wrong path.";
         public const string ERROR_NO_ALGORITHM = "The first line of file must be the type of ticket('Piter' or 'Moskow')";
 

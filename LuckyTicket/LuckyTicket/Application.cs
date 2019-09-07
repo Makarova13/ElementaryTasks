@@ -1,44 +1,81 @@
 ﻿using System;
 using UserInterface;
 using System.IO;
+using OperationsWithNums;
 
 namespace LuckyTicket
 {
-    class Application
+    public class Application
     {
         public IUserInterface UI { get; }
 
-        public Application(IUserInterface ui)
+        public Application(IUserInterface ui, string path)
         {
             UI = ui;
-            Run();
+            Run(path);
         }
 
-        private void Run()
+        private void Run(string path)
         {
-            string path;
-            UI.ShowMessage(Messages.ENTER_PATH);
-            path = UI.ReadLine();
-
             if (!File.Exists(path))
             {
-                UI.ShowMessage(Messages.ERROR_WRONG_PATH);
+                throw new FileNotFoundException(Messages.ERROR_WRONG_PATH);
             }
-            else
+
+            try
             {
-                try
-                {
-                    Counter counter = new Counter();
-                    counter.CountLucky(path);
-                    UI.ShowMessage($"Count of lucky tickets: {counter.AmountOfLucky}");
-                }
-                catch (FormatException ex)
-                {
-                    UI.ShowMessage(ex.Message);
-                }
+                GetMinAndMax(out int min, out int max);
+
+                TicketsAnalyser ticketsAnalyser = new TicketsAnalyser(
+                       GetAlgorithm(path), min, max);
+
+                UI.ShowMessage($"Count of lucky tickets: {ticketsAnalyser.AmountOfLucky}");
+            }
+            catch (FormatException ex)
+            {
+                UI.ShowMessage(ex.Message);
             }
 
             UI.Pause();
+        }
+
+        private ICheckIfLucky GetAlgorithm(string path)
+        {
+            Ticket ticket = new Ticket();
+
+            using (StreamReader file = new StreamReader(path))
+            {
+                Enum.TryParse(file.ReadLine(), out TicketType ticketType);
+
+                switch (ticketType)
+                {
+                    case TicketType.Moskow:
+                        return new MoskowTicketAlgorithm();
+
+                    case TicketType.Piter:
+                        return new PiterTicketAlgorithm();
+
+                    default:
+                        throw new FormatException(Messages.ERROR_NO_ALGORITHM);
+                }
+            }
+        }
+
+        private void GetMinAndMax(out int min, out int max)
+        {
+            min = 0;
+            max = 0;
+
+            UI.ShowMessage(Messages.ENTER_MIN);
+            min = TicketValidator.ValidateRange(UI.ReadLine());
+
+            UI.ShowMessage(Messages.ENTER_MAX);
+            max = TicketValidator.ValidateRange(UI.ReadLine());
+
+            if (max < min)
+            {
+                Operations.Swipe(ref max, ref min);
+            }
         }
     }
 }

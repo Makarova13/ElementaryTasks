@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LuckyTicket
 {
-    interface ICheckIfLucky
+    public interface ICheckIfLucky
     {
         void CheckIfLucky(Ticket number);
     }
