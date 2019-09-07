@@ -2,12 +2,14 @@
 {
     class PiterTicketAlgorithm: ICheckIfLucky
     {
+        uint oddSum = 0;
+        uint evenSum = 0;
+
         public void CheckIfLucky(Ticket number)
         {
-            uint oddSum = 0;
-            uint evenSum = 0;
 
-            for (int i = number.Length - 1; i >= 0; i--)
+
+            for (int i = Ticket.NumberLength - 1; i >= 0; i--)
             {
                 if (number[i] % 2 == 0) 
                 {

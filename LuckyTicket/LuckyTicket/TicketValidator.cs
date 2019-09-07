@@ -8,29 +8,10 @@ namespace LuckyTicket
 {
     class TicketValidator
     {
-        public bool ValideType(TicketType ticketType, out ICheckIfLucky lucky)
-        {
-            switch (ticketType)
-            {
-                case TicketType.Moskow:
-                    lucky = new MoskowTicketAlgorithm();
-                    return true;
-
-                case TicketType.Piter:
-                    lucky = new PiterTicketAlgorithm();
-                    return true;
-
-                default:
-                    lucky = null;
-                    return false;
-            }
-        }
-
         public bool ValidateNumber(string str, Ticket ticket)
         {
             char[] charArr = str.ToCharArray();
-            int length = charArr.Length;
-            byte[] byteArr = new byte[length];
+            byte[] byteArr = new byte[Ticket.NumberLength];
 
             for (int i = 0; i < charArr.Length; i++)
             {

@@ -13,10 +13,10 @@ namespace Task2Envelope.Tests
         [InlineData("L", "K")]
         public void TestCreateEnvelope(string a, string b)
         {
-            ConsoleUI UI = new ConsoleUI();
             INumsValidator numsValidator = new NumsValidator();
+            IArgsValidator argsValidator = new ArgsValidator();
 
-            EnvelopeCreator creator = new EnvelopeCreator(UI, numsValidator);
+            EnvelopeCreator creator = new EnvelopeCreator(numsValidator, argsValidator);
             Assert.Throws<FormatException>(() => creator.CreateEnvelope(a, b));
         }
     }

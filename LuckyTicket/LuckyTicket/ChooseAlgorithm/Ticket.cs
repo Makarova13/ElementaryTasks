@@ -13,7 +13,7 @@ namespace LuckyTicket
 
         public byte[] Number { get; set; }
 
-        public int Length { get => Number.Length; }
+        public const int NumberLength = 6;
 
         public byte this[int index]
         {
