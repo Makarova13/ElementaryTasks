@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NumValidator.cs" />
+    <Compile Include="ArgsValidator.cs" />
+    <Compile Include="IArgsValidator.cs" />
+    <Compile Include="INumsValidator.cs" />
+    <Compile Include="NumsValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

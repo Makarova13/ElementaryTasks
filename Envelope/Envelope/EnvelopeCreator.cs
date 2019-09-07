@@ -1,18 +1,21 @@
 ﻿using UserInterface;
 using Validator;
+using System;
 
-namespace Envelope
+namespace Task2Envelope
 {
-    class EnvelopeCreator
+    public class EnvelopeCreator
     {
-        public EnvelopeCreator(IUserInterface ui)
+        private IUserInterface UI { get; set; }
+        private INumsValidator Validator { get; set; }
+
+        public EnvelopeCreator(IUserInterface ui, INumsValidator validator)
         {
             UI = ui;
+            Validator = validator;
         }
 
-        private IUserInterface UI { get; set; }
-
-        public Envelope CreateEnvelope(string arg1, string arg2)  //get envelope from args
+        public Envelope CreateEnvelope(string arg1, string arg2)     //get envelope from args
         {
             return new Envelope(float.Parse(arg1), float.Parse(arg2));
         }
@@ -27,25 +30,20 @@ namespace Envelope
 
         private float GetFloat(string mes)
         {
-            NumValidator validator = new NumValidator();
-
-            while (true)
+            if (!float.TryParse(UI.ReadLine(), out float result))
             {
-                if (!float.TryParse(UI.ReadLine(), out float result))
-                {
-                    UI.ShowMessage(StringConsts.WRONG_FORMAT_ERROR);
-                }
-
-                else if (!validator.IsPositive(result))
-                {
-                    UI.ShowMessage(StringConsts.NEGATIVE_NUM_ERROR);
-                }
-
-                else
-                {
-                    return result;
-                }
+                throw new FormatException(StringConsts.WRONG_FORMAT_ERROR);
             }
+
+            else if (!Validator.IsPositive(result))
+            {
+                throw new FormatException(StringConsts.NEGATIVE_NUM_ERROR);
+            }
+
+            else
+            {
+                return result;
+            }         
         }
     }
 }
