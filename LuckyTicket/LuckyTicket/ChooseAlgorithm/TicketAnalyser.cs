@@ -1,8 +1,8 @@
 ﻿namespace LuckyTicket
 {
-    class TicketAnalyser
+    class TicketsAnalyser
     {
-        public TicketAnalyser(ICheckIfLucky checkIfLucky, Ticket ticket)
+        public TicketsAnalyser(ICheckIfLucky checkIfLucky, Ticket ticket)
         {
             CurrentTicket = ticket;
             Algorithm = checkIfLucky;

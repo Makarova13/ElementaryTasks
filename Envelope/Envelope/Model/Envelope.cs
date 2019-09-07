@@ -26,40 +26,39 @@ namespace Task2Envelope
             Width = width;
         }
 
-        public void CheckPutIn(Envelope en)
+        public bool CheckPutIn(Envelope en)
         {
             if (Equals(en))
             {
-                EnvelopeChecked?.Invoke(StringConsts.EQUAL_ENVELOPES);               
+                EnvelopeChecked?.Invoke(StringConsts.EQUAL_ENVELOPES);
+                return false;
             }
 
-            else
+            if (this < en)
             {
-                if (this < en)
-                {
-                    EnvelopeChecked?.Invoke(StringConsts.FIRST_IN_SECOND);
-                }
+                EnvelopeChecked?.Invoke(StringConsts.FIRST_IN_SECOND);
+                return true;
+            }
 
-                else if (this > en)
-                {
-                    EnvelopeChecked?.Invoke(StringConsts.SECOND_IN_FIRST);
-                }
+            if (this > en)
+            {
+                EnvelopeChecked?.Invoke(StringConsts.SECOND_IN_FIRST);
+                return true;
+            }
 
-                else
-                {
-                    EnvelopeChecked?.Invoke(StringConsts.NONE_ENVELOPE);
-                }
-            }          
+            EnvelopeChecked?.Invoke(StringConsts.NONE_ENVELOPE);
+
+            return false;
         }
 
         public static bool operator <(Envelope en1, Envelope en2)
         {
-            return (en1.Length < en2.Length && en1.Width < en2.Width);
+            return (en1.Length < en2.Length) && (en1.Width < en2.Width);
         }
 
         public static bool operator >(Envelope en1, Envelope en2)
         {
-            return (en1.Length > en2.Length && en1.Width > en2.Width);
+            return (en1.Length > en2.Length) && (en1.Width > en2.Width);
         }
 
         public override bool Equals(object en1)

@@ -19,6 +19,7 @@ namespace Task2Envelope
         {
             float side1 = CheckArgument(arg1);
             float side2 = CheckArgument(arg2);
+
             return new Envelope(float.Parse(arg1), float.Parse(arg2));
         }
 
@@ -34,10 +35,7 @@ namespace Task2Envelope
                 throw new FormatException(StringConsts.NEGATIVE_NUM_ERROR);
             }
 
-            else
-            {
-                return result;
-            }         
+            return result;
         }
     }
 }
