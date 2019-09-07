@@ -5,11 +5,10 @@
         #region messages
 
         public const string FIRST_IN_SECOND = "You can put the first envelope in the second.";
-        public const string SECOND_IN_FIRST = "You can put the first envelope in the second.";
+        public const string SECOND_IN_FIRST = "You can put the second envelope in the first.";
         public const string ENTER_LENGTH = "Enter length of the envelope: ";
         public const string ENTER_WIDTH = "Enter width of the envelope: ";
-        public const string FIRST_ENVELOPE = "__First envelope__";
-        public const string SECOND_ENVELOPE = "__Second envelope__";
+        public const string CONSOLE_INSTRUCTION = @"Enter the length and width separeted by enter.";
         public const string CONTINUE = "Do you want to check other envelopes?  ";
         public const string NONE_ENVELOPE = "None envelope can be put in in another.";
         public const string EQUAL_ENVELOPES = "Envelopes are equal.";

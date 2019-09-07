@@ -14,22 +14,16 @@ namespace Task2Envelope
         public Application(IUserInterface ui, IArgsValidator validatorArgs, INumsValidator validatorNums)
         {
             UI = ui;
-            creator = new EnvelopeCreator(UI, validatorNums);
+            creator = new EnvelopeCreator(validatorNums, validatorArgs);
             ValidatorArgs = validatorArgs;
             ValidatorNums = validatorNums;
         }
 
         public void Run(string[] args)
         {
-            Envelope en1;
-            Envelope en2;
-
             if (args.Length == 4 && ValidatorArgs.ArgsAreFloat(args))
             {
-                en1 = creator.CreateEnvelope(args[0], args[1]);
-                en2 = creator.CreateEnvelope(args[2], args[3]);
-
-                CheckEnvelopes(en1, en2);
+                CheckEnvelopes(args[0], args[1], args[2], args[3]);
             }
             else
             {
@@ -40,33 +34,34 @@ namespace Task2Envelope
             while (UI.WannaContinue)
             {
                 UI.Clear();
-
-                try
-                {
-                    UI.ShowMessage(StringConsts.FIRST_ENVELOPE);
-                    en1 = creator.CreateEnvelope();
-
-                    UI.ShowMessage(StringConsts.SECOND_ENVELOPE);
-                    en2 = creator.CreateEnvelope();
-
-                    CheckEnvelopes(en1, en2);
-                }
-                catch(FormatException ex)
-                {
-                    UI.ShowMessage(ex.Message);
-                    UI.AskContinue(StringConsts.CONTINUE);
-                }
+                UI.ShowMessage(StringConsts.CONSOLE_INSTRUCTION);
+                CheckEnvelopes(UI.ReadLine(), UI.ReadLine(), UI.ReadLine(), UI.ReadLine());
             }
         }
 
-        private void CheckEnvelopes(Envelope en1, Envelope en2)
+        private void CheckEnvelopes(string side1, string side2, string side3, string side4)
         {
-            en1.EnvelopeChecked += UI.ShowMessage;
+            Envelope en1;
+            Envelope en2;
 
-            en1.CheckPutIn(en2);
-            UI.AskContinue(StringConsts.CONTINUE);
+            try
+            {
+                en1 = creator.CreateEnvelope(side1, side2);
+                en2 = creator.CreateEnvelope(side3, side4);
 
-            en1.EnvelopeChecked -= UI.ShowMessage;
+                en1.EnvelopeChecked += UI.ShowMessage;
+
+                en1.CheckPutIn(en2);
+                UI.AskContinue(StringConsts.CONTINUE);
+
+                en1.EnvelopeChecked -= UI.ShowMessage;
+
+            }
+            catch (FormatException ex)
+            {
+                UI.ShowMessage(ex.Message);
+                UI.AskContinue(StringConsts.CONTINUE);
+            }
         }
     }
 }

@@ -59,7 +59,7 @@ namespace Task2Envelope
 
         public static bool operator >(Envelope en1, Envelope en2)
         {
-            return en2.Length < en1.Length && en2.Width < en1.Width;
+            return (en1.Length > en2.Length && en1.Width > en2.Width);
         }
 
         public override bool Equals(object en1)

@@ -5,60 +5,42 @@ using OperationsWithNums;
 
 namespace LuckyTicket
 {
-    class Counter
+    public class Counter
     {
         #region Properties
 
         public int AmountOfLucky { get; private set; } = 0;
-        private TicketValidator validator { get; set; }
-
-        #endregion
-
-        #region Fields
-
-        private string line;
-        private char[] charArr;
-        private TicketAnalyser ticketAnalyser;
-        private Ticket ticket;
+        private TicketValidator Validator { get; set; }
+        private TicketAnalyser TicketAnalyser { get; set; }
+        private Ticket ticket { get; set; }
 
         #endregion
 
         public void CountLucky(string path)
         {
-            validator = new TicketValidator();
+            Validator = new TicketValidator();
             ticket = new Ticket();
 
             using (StreamReader file = new StreamReader(path, Encoding.Default))
             {
                 Enum.TryParse(file.ReadLine(), out TicketType ticketType);
 
-                if (!validator.ValideType(ticketType, out ICheckIfLucky checkIfLucky))
+                if (!Validator.ValideType(ticketType, out ICheckIfLucky checkIfLucky))
                 {
                     throw new FormatException(Messages.ERROR_NO_ALGORITHM);
                 }
 
-                ticketAnalyser = new TicketAnalyser(checkIfLucky, ticket);
-
-                while ((line = file.ReadLine()) != null)
-                {
-                    CountInLine(line);
-                }
+                TicketAnalyser = new TicketAnalyser(checkIfLucky, ticket);
             }
         }
 
         private void CountInLine(string line)
         {
-            charArr = line.ToCharArray();
-
-            if (validator.ValidateNumber(line, ticket))
+            TicketAnalyser.CheckIfLucky(ticket);
+            if (ticket.IsLucky)
             {
-                ticketAnalyser.CheckIfLucky(ticket);
-                if (ticket.IsLucky)
-                {
-                    AmountOfLucky++;
-                }
+                AmountOfLucky++;
             }
         }
-
     }
 }
