@@ -43,8 +43,6 @@ namespace LuckyTicket
 
         private ICheckIfLucky GetAlgorithm(string path)
         {
-            Ticket ticket = new Ticket();
-
             using (StreamReader file = new StreamReader(path))
             {
                 Enum.TryParse(file.ReadLine(), out TicketType ticketType);
