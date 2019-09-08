@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using UserInterface;
+using NLog;
 
 namespace LuckyTicket
 {
@@ -12,6 +13,7 @@ namespace LuckyTicket
             if (args.Length != 1)
             {
                 userInterface.ShowMessage(Messages.INSTRUCTION);
+                
                 userInterface.Pause();
             }
 

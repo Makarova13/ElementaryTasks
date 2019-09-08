@@ -2,8 +2,6 @@
 {
     public class PiterTicketAlgorithm: ICheckIfLucky
     {
-
-
         public void CheckIfLucky(Ticket number)
         {
             uint oddSum = 0;

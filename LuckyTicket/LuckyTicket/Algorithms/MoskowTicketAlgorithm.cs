@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LuckyTicket
+﻿namespace LuckyTicket
 {
     public class MoskowTicketAlgorithm: ICheckIfLucky
     {

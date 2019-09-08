@@ -1,0 +1,17 @@
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\bin\Debug\netcoreapp2.1\OperationsWithNums.Test.deps.json
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\bin\Debug\netcoreapp2.1\OperationsWithNums.Test.runtimeconfig.json
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\bin\Debug\netcoreapp2.1\OperationsWithNums.Test.runtimeconfig.dev.json
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\bin\Debug\netcoreapp2.1\OperationsWithNums.Test.dll
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\bin\Debug\netcoreapp2.1\OperationsWithNums.Test.pdb
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\bin\Debug\netcoreapp2.1\OperationsWithNums.dll
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\bin\Debug\netcoreapp2.1\OperationsWithNums.pdb
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\obj\Debug\netcoreapp2.1\OperationsWithNums.Test.csprojAssemblyReference.cache
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\obj\Debug\netcoreapp2.1\OperationsWithNums.Test.csproj.CoreCompileInputs.cache
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\obj\Debug\netcoreapp2.1\OperationsWithNums.Test.AssemblyInfoInputs.cache
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\obj\Debug\netcoreapp2.1\OperationsWithNums.Test.AssemblyInfo.cs
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\obj\Debug\netcoreapp2.1\OperationsWithNums.Test.csproj.CopyComplete
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\obj\Debug\netcoreapp2.1\OperationsWithNums.Test.dll
+C:\Users\user\softserve\Tasks\OperationsWithNums.Test\OperationsWithNums.Test\obj\Debug\netcoreapp2.1\OperationsWithNums.Test.pdb
