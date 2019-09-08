@@ -8,7 +8,7 @@ namespace LuckyTicket
 {
     public class TicketValidator
     {
-        public static int ValidateRange(string str)
+        public int ValidateRange(string str)
         {
             if (!int.TryParse(str, out int number))
             {

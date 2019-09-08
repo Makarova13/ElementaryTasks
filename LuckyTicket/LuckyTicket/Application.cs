@@ -65,12 +65,13 @@ namespace LuckyTicket
         {
             min = 0;
             max = 0;
+            TicketValidator ticketValidator = new TicketValidator();
 
             UI.ShowMessage(Messages.ENTER_MIN);
-            min = TicketValidator.ValidateRange(UI.ReadLine());
+            min = ticketValidator.ValidateRange(UI.ReadLine());
 
             UI.ShowMessage(Messages.ENTER_MAX);
-            max = TicketValidator.ValidateRange(UI.ReadLine());
+            max = ticketValidator.ValidateRange(UI.ReadLine());
 
             if (max < min)
             {
