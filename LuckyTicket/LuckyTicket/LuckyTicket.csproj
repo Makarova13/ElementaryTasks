@@ -54,15 +54,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application.cs" />
-    <Compile Include="ChooseAlgorithm\ICheckIfLucky.cs" />
-    <Compile Include="ChooseAlgorithm\Ticket.cs" />
+    <Compile Include="Algorithms\ICheckIfLucky.cs" />
+    <Compile Include="Algorithms\Ticket.cs" />
     <Compile Include="Messages.cs" />
-    <Compile Include="ChooseAlgorithm\MoskowTicketAlgorithm.cs" />
-    <Compile Include="ChooseAlgorithm\PiterTicketAlgorithm.cs" />
+    <Compile Include="Algorithms\MoskowTicketAlgorithm.cs" />
+    <Compile Include="Algorithms\PiterTicketAlgorithm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ChooseAlgorithm\TicketsAnalyser.cs" />
-    <Compile Include="ChooseAlgorithm\TicketType.cs" />
+    <Compile Include="Algorithms\TicketsAnalyser.cs" />
+    <Compile Include="Algorithms\TicketType.cs" />
     <Compile Include="TicketValidator.cs" />
   </ItemGroup>
   <ItemGroup>

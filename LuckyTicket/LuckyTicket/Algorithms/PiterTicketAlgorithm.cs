@@ -1,15 +1,17 @@
 ﻿namespace LuckyTicket
 {
-    class PiterTicketAlgorithm: ICheckIfLucky
+    public class PiterTicketAlgorithm: ICheckIfLucky
     {
-        uint oddSum = 0;
-        uint evenSum = 0;
+
 
         public void CheckIfLucky(Ticket number)
         {
-            for (int i = Ticket.NumberLength - 1; i >= 0; i--)
+            uint oddSum = 0;
+            uint evenSum = 0;
+
+            for (int i = Ticket.NumberLength - 1, j = 1; i >= 0; i--, j++)
             {
-                if (number[i] % 2 == 0) 
+                if (j % 2 == 0)
                 {
                     evenSum += number[i];
                 }

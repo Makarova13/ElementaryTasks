@@ -1,4 +1,5 @@
-﻿using UserInterface;
+﻿using System.IO;
+using UserInterface;
 
 namespace LuckyTicket
 {
@@ -13,9 +14,18 @@ namespace LuckyTicket
                 userInterface.ShowMessage(Messages.INSTRUCTION);
                 userInterface.Pause();
             }
+
             else
             {
-                new Application(userInterface, args[0]);
+                try
+                {
+                    new Application(userInterface);
+                }
+                catch (FileNotFoundException ex)
+                {
+                    userInterface.ShowMessage(ex.Message);
+                    userInterface.Pause();
+                }
             }
         }
     }

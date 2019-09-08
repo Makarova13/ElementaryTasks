@@ -1,4 +1,5 @@
 ﻿using System;
+using OperationsWithNums;
 
 namespace LuckyTicket
 {
@@ -19,15 +20,12 @@ namespace LuckyTicket
 
         public void CheckAll(int min, int max)
         {
-            Ticket ticket = new Ticket
-            {
-                Number = new byte[Ticket.NumberLength]
-            };
+            Ticket ticket = new Ticket();
 
-
-            for (int i = min; i < max; i++)
+            for (int i = min; i <= max; i++)
             {
-                ticket.Number = BitConverter.GetBytes(i);
+                ticket.Number = new byte[Ticket.NumberLength];
+                ticket.Number = Operations.ConvertToByteArray(i, Ticket.NumberLength);
                 Algorithm.CheckIfLucky(ticket);
 
                 if (ticket.IsLucky)

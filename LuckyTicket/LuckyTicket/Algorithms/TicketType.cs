@@ -1,4 +1,4 @@
-﻿enum TicketType
+﻿public enum TicketType
 {
     NotDetermined,
     Moskow,

@@ -20,7 +20,7 @@ namespace LuckyTicket
                 rightSum += number[i];
             }
 
-             number.IsLucky = (rightSum == leftSum);
+            number.IsLucky = (rightSum == leftSum);
         }
     }
 }

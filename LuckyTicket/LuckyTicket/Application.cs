@@ -9,14 +9,16 @@ namespace LuckyTicket
     {
         public IUserInterface UI { get; }
 
-        public Application(IUserInterface ui, string path)
+        public Application(IUserInterface ui)
         {
             UI = ui;
-            Run(path);
+            Run();
         }
 
-        private void Run(string path)
+        private void Run()
         {
+            string path = UI.ReadLine();
+
             if (!File.Exists(path))
             {
                 throw new FileNotFoundException(Messages.ERROR_WRONG_PATH);
