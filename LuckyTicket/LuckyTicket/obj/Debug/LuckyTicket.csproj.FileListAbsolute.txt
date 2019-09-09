@@ -5,8 +5,12 @@ C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\LuckyTicket.pdb
 C:\softserve\Tasks\LuckyTicket\LuckyTicket\obj\Debug\LuckyTicket.csproj.CopyComplete
 C:\softserve\Tasks\LuckyTicket\LuckyTicket\obj\Debug\LuckyTicket.exe
 C:\softserve\Tasks\LuckyTicket\LuckyTicket\obj\Debug\LuckyTicket.pdb
-C:\softserve\Tasks\LuckyTicket\LuckyTicket\obj\Debug\LuckyTicket.csprojAssemblyReference.cache
 C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\OperationsWithNums.dll
 C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\UserInterface.dll
 C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\OperationsWithNums.pdb
 C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\UserInterface.pdb
+C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\NLog.config
+C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\NLog.dll
+C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\Logger.pdb
+C:\softserve\Tasks\LuckyTicket\LuckyTicket\bin\Debug\NLog.xml
+C:\softserve\Tasks\LuckyTicket\LuckyTicket\obj\Debug\LuckyTicket.csprojAssemblyReference.cache

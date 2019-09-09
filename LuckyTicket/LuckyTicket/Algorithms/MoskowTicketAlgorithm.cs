@@ -20,5 +20,10 @@
 
             number.IsLucky = (rightSum == leftSum);
         }
+
+        public override string ToString()
+        {
+            return Messages.MOSKOW_ALGORITHM;
+        }
     }
 }

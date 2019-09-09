@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using NLog;
 using UserInterface;
 using Validator;
 
@@ -7,13 +6,15 @@ namespace Task2Envelope
 {
     class Program
     {
+        private static readonly ILogger logger = LogManager.GetCurrentClassLogger();
+
         static void Main(string[] args)
         {
             ConsoleUI UI = new ConsoleUI();
             IArgsValidator argsValidator = new ArgsValidator();
             INumsValidator numsValidator = new NumsValidator();
 
-            new Application(UI, argsValidator, numsValidator).Run(args);          
+            new Application(UI, logger, argsValidator, numsValidator).Run(args);          
         }
     }
 }

@@ -2,21 +2,25 @@
 using UserInterface;
 using System.IO;
 using OperationsWithNums;
+using NLog;
 
 namespace LuckyTicket
 {
     public class Application
     {
         public IUserInterface UI { get; }
+        private ILogger Logger { get; set; }
 
-        public Application(IUserInterface ui)
+        public Application(IUserInterface ui, ILogger logger)
         {
+            Logger = logger;
             UI = ui;
             Run();
         }
 
         private void Run()
         {
+            Logger.Info(Messages.STARTED);
             string path = UI.ReadLine();
 
             if (!File.Exists(path))
@@ -29,12 +33,13 @@ namespace LuckyTicket
                 GetMinAndMax(out int min, out int max);
 
                 TicketsAnalyser ticketsAnalyser = new TicketsAnalyser(
-                       GetAlgorithm(path), min, max);
+                       GetAlgorithm(path), Logger, min, max);
 
                 UI.ShowMessage($"Count of lucky tickets: {ticketsAnalyser.AmountOfLucky}");
             }
             catch (FormatException ex)
             {
+                Logger.Error(ex, ex.Message);
                 UI.ShowMessage(ex.Message);
             }
 

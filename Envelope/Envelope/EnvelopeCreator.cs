@@ -1,4 +1,4 @@
-﻿using UserInterface;
+﻿using NLog;
 using Validator;
 using System;
 
@@ -9,8 +9,10 @@ namespace Task2Envelope
         private IArgsValidator ArgsValidator { get; set; }
         private INumsValidator NumsValidator { get; set; }
 
-        public EnvelopeCreator(INumsValidator numsValidator, IArgsValidator argsValidator)
+        public EnvelopeCreator(INumsValidator numsValidator, 
+                               IArgsValidator argsValidator, ILogger logger)
         {
+            logger.Info(StringConsts.CREATOR);
             ArgsValidator = argsValidator;
             NumsValidator = numsValidator;
         }

@@ -6,28 +6,21 @@ namespace LuckyTicket
 {
     class Program
     {
+        private static readonly ILogger logger = LogManager.GetCurrentClassLogger();
+
         static void Main(string[] args)
         {
             IUserInterface userInterface = new ConsoleUI();
 
-            if (args.Length != 1)
+            try
             {
-                userInterface.ShowMessage(Messages.INSTRUCTION);
-                
-                userInterface.Pause();
+                new Application(userInterface, logger);
             }
-
-            else
+            catch (FileNotFoundException ex)
             {
-                try
-                {
-                    new Application(userInterface);
-                }
-                catch (FileNotFoundException ex)
-                {
-                    userInterface.ShowMessage(ex.Message);
-                    userInterface.Pause();
-                }
+                userInterface.ShowMessage(ex.Message);
+                logger.Error(ex, ex.Message);
+                userInterface.Pause();
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using NLog;
 using OperationsWithNums;
 
 namespace LuckyTicket
@@ -9,11 +9,14 @@ namespace LuckyTicket
 
         public int AmountOfLucky { get; private set; } = 0;
         private ICheckIfLucky Algorithm { get; set; }
+        private ILogger Logger { get; set; }
 
         #endregion
 
-        public TicketsAnalyser(ICheckIfLucky checkIfLucky, int min, int max)
+        public TicketsAnalyser(ICheckIfLucky checkIfLucky, ILogger logger, int min, int max)
         {
+            Logger = logger;
+            Logger.Info(Messages.TICKETS_ANALYSER, checkIfLucky.ToString());
             Algorithm = checkIfLucky;
             CheckAll(min, max);
         }

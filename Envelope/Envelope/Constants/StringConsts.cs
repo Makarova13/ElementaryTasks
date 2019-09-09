@@ -24,5 +24,12 @@ To work from console, enter the length and width separeted by enter.";
         public const string NEGATIVE_NUM_ERROR = "You should write a positive number.";
 
         #endregion
+
+        #region logger messages
+
+        public const string STARTED = "Application started.";
+        public const string CREATOR = "Envelope creator created.";
+
+        #endregion
     }
 }

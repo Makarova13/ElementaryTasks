@@ -21,5 +21,10 @@
 
             number.IsLucky = (oddSum == evenSum);
         }
+
+        public override string ToString()
+        {
+            return Messages.PITER_ALGORITHM;
+        }
     }
 }

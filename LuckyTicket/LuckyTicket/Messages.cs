@@ -12,7 +12,6 @@ namespace LuckyTicket
 
         public const string ENTER_MIN = "Please enter minimum ticket number:";
         public const string ENTER_MAX = "Please enter maximum ticket number:";
-        public const string INSTRUCTION = "Path to the file with algorithm type must be indicated in ";
 
         #endregion
 
@@ -23,7 +22,16 @@ namespace LuckyTicket
         public const string ERROR_WRONG_PATH = "Wrong path.";
         public const string ERROR_NO_ALGORITHM = "The first line of file must be the type of ticket('Piter' or 'Moskow')";
 
-        #endregion       
-        
+        #endregion
+
+        #region Logger messages
+
+        public const string STARTED = "Application started";
+        public const string TICKETS_ANALYSER = "Tickets analyser created. Algorythm: ";
+        public const string MOSKOW_ALGORITHM = "Moskow ticket algorithm has been chosen.";
+        public const string PITER_ALGORITHM = "Piter ticket algorithm has been chosen.";
+
+        #endregion
+
     }
 }
