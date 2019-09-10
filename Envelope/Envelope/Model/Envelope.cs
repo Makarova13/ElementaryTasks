@@ -13,8 +13,6 @@ namespace Task2Envelope
 
         #endregion
 
-        public event Action<string> EnvelopeChecked;
-
         public Envelope(float length, float width)
         {
             if (width > length)
@@ -42,8 +40,6 @@ namespace Task2Envelope
             {
                 return Outcomes.SecondInFirst;
             }
-
-            EnvelopeChecked?.Invoke(StringConsts.NONE_ENVELOPE);
 
             return Outcomes.None;
         }

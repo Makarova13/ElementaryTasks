@@ -1,6 +1,6 @@
 ﻿using System;
 using Xunit;
-using UserInterface;
+using NLog;
 using Validator;
 
 namespace Task2Envelope.Tests
@@ -16,7 +16,7 @@ namespace Task2Envelope.Tests
             INumsValidator numsValidator = new NumsValidator();
             IArgsValidator argsValidator = new ArgsValidator();
 
-            EnvelopeCreator creator = new EnvelopeCreator(numsValidator, argsValidator);
+            EnvelopeCreator creator = new EnvelopeCreator(numsValidator, argsValidator, null);
             Assert.Throws<FormatException>(() => creator.CreateEnvelope(a, b));
         }
     }
