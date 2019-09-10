@@ -1,0 +1,17 @@
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\bin\Debug\netcoreapp2.1\Validator.Test.deps.json
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\bin\Debug\netcoreapp2.1\Validator.Test.runtimeconfig.json
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\bin\Debug\netcoreapp2.1\Validator.Test.runtimeconfig.dev.json
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\bin\Debug\netcoreapp2.1\Validator.Test.dll
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\bin\Debug\netcoreapp2.1\Validator.Test.pdb
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\bin\Debug\netcoreapp2.1\Validator.dll
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\bin\Debug\netcoreapp2.1\Validator.pdb
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\obj\Debug\netcoreapp2.1\Validator.Test.csprojAssemblyReference.cache
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\obj\Debug\netcoreapp2.1\Validator.Test.csproj.CoreCompileInputs.cache
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\obj\Debug\netcoreapp2.1\Validator.Test.AssemblyInfoInputs.cache
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\obj\Debug\netcoreapp2.1\Validator.Test.AssemblyInfo.cs
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\obj\Debug\netcoreapp2.1\Validator.Test.csproj.CopyComplete
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\obj\Debug\netcoreapp2.1\Validator.Test.dll
+C:\softserve\Tasks\Tests\Validator.Test\Validator.Test\obj\Debug\netcoreapp2.1\Validator.Test.pdb

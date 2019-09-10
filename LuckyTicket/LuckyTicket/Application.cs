@@ -21,6 +21,8 @@ namespace LuckyTicket
         private void Run()
         {
             Logger.Info(Messages.STARTED);
+
+            UI.ShowMessage(Messages.ENTER_PATH);
             string path = UI.ReadLine();
 
             if (!File.Exists(path))
@@ -30,10 +32,11 @@ namespace LuckyTicket
 
             try
             {
+                var algorithm = AlgorithmChooser.GetAlgorithm(path);
                 GetMinAndMax(out int min, out int max);
 
                 TicketsAnalyser ticketsAnalyser = new TicketsAnalyser(
-                       GetAlgorithm(path), Logger, min, max);
+                       algorithm, Logger, min, max);
 
                 UI.ShowMessage($"Count of lucky tickets: {ticketsAnalyser.AmountOfLucky}");
             }
@@ -44,26 +47,6 @@ namespace LuckyTicket
             }
 
             UI.Pause();
-        }
-
-        private ICheckIfLucky GetAlgorithm(string path)
-        {
-            using (StreamReader file = new StreamReader(path))
-            {
-                Enum.TryParse(file.ReadLine(), out TicketType ticketType);
-
-                switch (ticketType)
-                {
-                    case TicketType.Moskow:
-                        return new MoskowTicketAlgorithm();
-
-                    case TicketType.Piter:
-                        return new PiterTicketAlgorithm();
-
-                    default:
-                        throw new FormatException(Messages.ERROR_NO_ALGORITHM);
-                }
-            }
         }
 
         private void GetMinAndMax(out int min, out int max)

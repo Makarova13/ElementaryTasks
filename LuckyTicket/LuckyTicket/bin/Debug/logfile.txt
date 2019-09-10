@@ -1,0 +1,10 @@
+2019-09-10 20:26:44.9169|INFO|LuckyTicket.Program|Application started
+2019-09-10 20:27:32.9459|INFO|LuckyTicket.Program|Application started
+2019-09-10 20:29:07.2621|INFO|LuckyTicket.Program|Application started
+2019-09-10 20:29:52.1015|ERROR|LuckyTicket.Program|The ticket must have 6 characters.
+2019-09-10 20:29:52.1015|ERROR|LuckyTicket.Program|The ticket must have 6 characters.
+2019-09-10 20:31:32.3615|INFO|LuckyTicket.Program|Application started
+2019-09-10 20:31:39.8907|ERROR|LuckyTicket.Program|The first line of file must be the type of ticket('Piter' or 'Moskow')
+2019-09-10 20:31:39.8907|ERROR|LuckyTicket.Program|The first line of file must be the type of ticket('Piter' or 'Moskow')
+2019-09-10 20:32:05.6148|INFO|LuckyTicket.Program|Application started
+2019-09-10 20:34:02.4284|INFO|LuckyTicket.Program|Application started

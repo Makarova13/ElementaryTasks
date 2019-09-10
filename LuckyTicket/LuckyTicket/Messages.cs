@@ -10,6 +10,7 @@ namespace LuckyTicket
     {
         #region messages
 
+        public const string ENTER_PATH = "Please enter path to the file with algorithm:";
         public const string ENTER_MIN = "Please enter minimum ticket number:";
         public const string ENTER_MAX = "Please enter maximum ticket number:";
 

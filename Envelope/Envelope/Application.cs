@@ -17,7 +17,7 @@ namespace Task2Envelope
             IArgsValidator validatorArgs, INumsValidator validatorNums)
         {
             UI = ui;
-            creator = new EnvelopeCreator(validatorNums, validatorArgs, logger);
+            creator = new EnvelopeCreator(validatorNums, validatorArgs);
             ValidatorArgs = validatorArgs;
             ValidatorNums = validatorNums;
             Logger = logger;

@@ -10,9 +10,8 @@ namespace Task2Envelope
         private INumsValidator NumsValidator { get; set; }
 
         public EnvelopeCreator(INumsValidator numsValidator, 
-                               IArgsValidator argsValidator, ILogger logger)
+                               IArgsValidator argsValidator)
         {
-            logger.Info(StringConsts.CREATOR);
             ArgsValidator = argsValidator;
             NumsValidator = numsValidator;
         }

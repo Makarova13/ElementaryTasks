@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlgorithmChooser.cs" />
     <Compile Include="Application.cs" />
     <Compile Include="Algorithms\ICheckIfLucky.cs" />
     <Compile Include="Algorithms\Ticket.cs" />

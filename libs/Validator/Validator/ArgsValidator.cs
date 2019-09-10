@@ -2,8 +2,6 @@
 {
     public class ArgsValidator: IArgsValidator
     {
-        public int ArgsNumber { get; private set; }
-
         public bool ArgsAreInt(string[] str)
         {
             foreach (string s in str)
@@ -13,6 +11,7 @@
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -25,6 +24,7 @@
                     return false;
                 }
             }
+
             return true;
         }
     }
