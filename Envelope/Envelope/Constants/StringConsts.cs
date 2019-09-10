@@ -1,4 +1,6 @@
-﻿namespace Task2Envelope
+﻿using System.Collections.Generic;
+
+namespace Task2Envelope
 {
     public static class StringConsts
     {
@@ -29,6 +31,18 @@ To work from console, enter the length and width separeted by enter.";
 
         public const string STARTED = "Application started.";
         public const string CREATOR = "Envelope creator created.";
+
+        #endregion
+
+        #region dictionary
+
+        public static Dictionary<Outcomes, string> Messeges = new Dictionary<Outcomes, string>
+        {
+            [Outcomes.None] = NONE_ENVELOPE,
+            [Outcomes.FirstInSecond] = FIRST_IN_SECOND,
+            [Outcomes.SecondInFirst] = SECOND_IN_FIRST,
+            [Outcomes.Equal] = EQUAL_ENVELOPES
+        };
 
         #endregion
     }

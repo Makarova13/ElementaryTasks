@@ -83,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application.cs" />
+    <Compile Include="Constants\Outcomes.cs" />
     <Compile Include="Model\Envelope.cs" />
     <Compile Include="EnvelopeCreator.cs" />
     <Compile Include="Program.cs" />

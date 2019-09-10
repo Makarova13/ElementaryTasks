@@ -80,7 +80,7 @@ namespace LuckyTicket
 
             if (max < min)
             {
-                Operations.Swipe(ref max, ref min);
+                Operations.Swap(ref max, ref min);
             }
         }
     }

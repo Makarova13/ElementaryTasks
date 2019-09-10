@@ -119,3 +119,5 @@ C:\softserve\Tasks\Envelope\Envelope\bin\Debug\System.Xml.XPath.XDocument.dll
 C:\softserve\Tasks\Envelope\Envelope\bin\Debug\Task2Envelope.Tests.dll
 C:\softserve\Tasks\Envelope\Envelope\bin\Debug\Task2Envelope.Tests.pdb
 C:\softserve\Tasks\Envelope\Envelope\obj\Debug\Envelope.exe.config
+C:\softserve\Tasks\Envelope\Envelope\bin\Debug\NLog.dll
+C:\softserve\Tasks\Envelope\Envelope\bin\Debug\NLog.xml

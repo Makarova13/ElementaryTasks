@@ -13,8 +13,8 @@ namespace Task2Envelope
         private INumsValidator ValidatorNums { get; }
         private ILogger Logger { get; set; }
 
-        public Application(IUserInterface ui, ILogger logger, 
-                           IArgsValidator validatorArgs, INumsValidator validatorNums)
+        public Application(IUserInterface ui, ILogger logger,
+            IArgsValidator validatorArgs, INumsValidator validatorNums)
         {
             UI = ui;
             creator = new EnvelopeCreator(validatorNums, validatorArgs, logger);
@@ -49,21 +49,15 @@ namespace Task2Envelope
         private void CheckEnvelopes(string side1, string side2, 
                                     string side3, string side4)
         {
-            Envelope en1;
-            Envelope en2;
-
             try
             {
-                en1 = creator.CreateEnvelope(side1, side2);
-                en2 = creator.CreateEnvelope(side3, side4);
+                Envelope en1 = creator.CreateEnvelope(side1, side2);
+                Envelope en2 = creator.CreateEnvelope(side3, side4);
 
-                en1.EnvelopeChecked += UI.ShowMessage;
+                Outcomes outcome = en1.CheckPutIn(en2);
+                UI.ShowMessage(StringConsts.Messeges[outcome]);
 
-                en1.CheckPutIn(en2);
                 UI.AskContinue(StringConsts.CONTINUE);
-
-                en1.EnvelopeChecked -= UI.ShowMessage;
-
             }
             catch (FormatException ex)
             {

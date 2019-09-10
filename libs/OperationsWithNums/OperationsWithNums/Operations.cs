@@ -4,7 +4,7 @@ namespace OperationsWithNums
 {
     public class Operations
     {
-        public static void Swipe<T>(ref T a, ref T b)
+        public static void Swap<T>(ref T a, ref T b)
         {
             T y = a;
             a = b;

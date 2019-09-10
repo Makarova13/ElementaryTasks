@@ -19,36 +19,33 @@ namespace Task2Envelope
         {
             if (width > length)
             {
-                Operations.Swipe(ref width, ref length);
+                Operations.Swap(ref width, ref length);
             }
 
             Length = length;
             Width = width;
         }
 
-        public bool CheckPutIn(Envelope en)
+        public Outcomes CheckPutIn(Envelope en)
         {
             if (Equals(en))
             {
-                EnvelopeChecked?.Invoke(StringConsts.EQUAL_ENVELOPES);
-                return false;
+                return Outcomes.Equal;
             }
 
             if (this < en)
             {
-                EnvelopeChecked?.Invoke(StringConsts.FIRST_IN_SECOND);
-                return true;
+                return Outcomes.FirstInSecond;
             }
 
             if (this > en)
             {
-                EnvelopeChecked?.Invoke(StringConsts.SECOND_IN_FIRST);
-                return true;
+                return Outcomes.SecondInFirst;
             }
 
             EnvelopeChecked?.Invoke(StringConsts.NONE_ENVELOPE);
 
-            return false;
+            return Outcomes.None;
         }
 
         public static bool operator <(Envelope en1, Envelope en2)
