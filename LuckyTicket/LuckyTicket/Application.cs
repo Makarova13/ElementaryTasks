@@ -36,7 +36,9 @@ namespace LuckyTicket
                 GetMinAndMax(out int min, out int max);
 
                 TicketsAnalyser ticketsAnalyser = new TicketsAnalyser(
-                       algorithm, Logger, min, max);
+                       algorithm, Logger);
+
+                ticketsAnalyser.CheckAll(min, max);
 
                 UI.ShowMessage($"Count of lucky tickets: {ticketsAnalyser.AmountOfLucky}");
             }
@@ -53,13 +55,12 @@ namespace LuckyTicket
         {
             min = 0;
             max = 0;
-            TicketValidator ticketValidator = new TicketValidator();
 
             UI.ShowMessage(Messages.ENTER_MIN);
-            min = ticketValidator.ValidateRange(UI.ReadLine());
+            min = TicketValidator.ValidateRange(UI.ReadLine());
 
             UI.ShowMessage(Messages.ENTER_MAX);
-            max = ticketValidator.ValidateRange(UI.ReadLine());
+            max = TicketValidator.ValidateRange(UI.ReadLine());
 
             if (max < min)
             {

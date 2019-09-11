@@ -6,18 +6,21 @@ using Validator;
 namespace Task2Envelope
 {
     class Application
-    {       
-        private EnvelopeCreator creator;
+    {
+        #region properties
+
+        private EnvelopeCreator Creator { get; set; }
         private IUserInterface UI { get; }
         private IArgsValidator ValidatorArgs { get; }
         private INumsValidator ValidatorNums { get; }
-        private ILogger Logger { get; set; }
+        private ILogger Logger { get; }
+
+        #endregion
 
         public Application(IUserInterface ui, ILogger logger,
             IArgsValidator validatorArgs, INumsValidator validatorNums)
         {
-            UI = ui;
-            creator = new EnvelopeCreator(validatorNums, validatorArgs);
+            UI = ui;          
             ValidatorArgs = validatorArgs;
             ValidatorNums = validatorNums;
             Logger = logger;
@@ -26,6 +29,7 @@ namespace Task2Envelope
         public void Run(string[] args)
         {
             Logger.Info(StringConsts.STARTED);
+            Creator = new EnvelopeCreator(ValidatorNums, ValidatorArgs);
 
             if (args.Length == 4 && ValidatorArgs.ArgsAreFloat(args))
             {
@@ -46,15 +50,15 @@ namespace Task2Envelope
             }
         }
 
-        private void CheckEnvelopes(string side1, string side2, 
-                                    string side3, string side4)
+        private void CheckEnvelopes(string side1en1, string side2en1, 
+                                    string side1en2, string side2en2)
         {
             try
             {
-                Envelope en1 = creator.CreateEnvelope(side1, side2);
-                Envelope en2 = creator.CreateEnvelope(side3, side4);
+                Envelope en1 = Creator.CreateEnvelope(side1en1, side2en1);
+                Envelope en2 = Creator.CreateEnvelope(side1en2, side2en2);
 
-                Outcomes outcome = en1.CheckPutIn(en2);
+                Outcomes outcome = en1.TryPutIn(en2);
                 UI.ShowMessage(StringConsts.Messeges[outcome]);
 
                 UI.AskContinue(StringConsts.CONTINUE);

@@ -12,17 +12,15 @@ namespace LuckyTicket
 
         #endregion
 
-        public TicketsAnalyser(ICheckIfLucky checkIfLucky, ILogger logger, int min, int max)
+        public TicketsAnalyser(ICheckIfLucky checkIfLucky, ILogger logger)
         {
             logger.Info(Messages.TICKETS_ANALYSER, checkIfLucky.ToString());
             Algorithm = checkIfLucky;
-            CheckAll(min, max);
         }
 
-        public TicketsAnalyser(ICheckIfLucky checkIfLucky, int min, int max)
+        public TicketsAnalyser(ICheckIfLucky checkIfLucky)
         {
             Algorithm = checkIfLucky;
-            CheckAll(min, max);
         }
 
         public void CheckAll(int min, int max)

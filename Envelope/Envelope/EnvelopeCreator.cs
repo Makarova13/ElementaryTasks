@@ -21,7 +21,7 @@ namespace Task2Envelope
             float side1 = CheckArgument(arg1);
             float side2 = CheckArgument(arg2);
 
-            return new Envelope(float.Parse(arg1), float.Parse(arg2));
+            return new Envelope(side1, side2);
         }
 
         private float CheckArgument(string arg)

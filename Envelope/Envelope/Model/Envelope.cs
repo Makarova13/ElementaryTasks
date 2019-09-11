@@ -24,7 +24,7 @@ namespace Task2Envelope
             Width = width;
         }
 
-        public Outcomes CheckPutIn(Envelope en)
+        public Outcomes TryPutIn(Envelope en)
         {
             if (Equals(en))
             {
@@ -62,7 +62,7 @@ namespace Task2Envelope
             }
             else
             {
-                throw new InvalidCastException();
+                throw new InvalidCastException(StringConsts.INVALID_CAST);
             }
         }
     }

@@ -10,7 +10,7 @@ namespace Task2Envelope
 
         static void Main(string[] args)
         {
-            ConsoleUI UI = new ConsoleUI();
+            IUserInterface UI = new ConsoleUI();
             IArgsValidator argsValidator = new ArgsValidator();
             INumsValidator numsValidator = new NumsValidator();
 

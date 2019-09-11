@@ -24,6 +24,7 @@ To work from console, enter the length and width separeted by enter.";
 
         public const string WRONG_FORMAT_ERROR = "You should write a number here.";
         public const string NEGATIVE_NUM_ERROR = "You should write a positive number.";
+        public const string INVALID_CAST = "Object cannot be cast to envelope.";
 
         #endregion
 
@@ -36,7 +37,7 @@ To work from console, enter the length and width separeted by enter.";
 
         #region dictionary
 
-        public static Dictionary<Outcomes, string> Messeges = new Dictionary<Outcomes, string>
+        public readonly static Dictionary<Outcomes, string> Messeges = new Dictionary<Outcomes, string>
         {
             [Outcomes.None] = NONE_ENVELOPE,
             [Outcomes.FirstInSecond] = FIRST_IN_SECOND,
