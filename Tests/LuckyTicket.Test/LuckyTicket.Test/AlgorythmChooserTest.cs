@@ -11,7 +11,7 @@ namespace LuckyTicket.Test
             string path = "C:/softserve/Tasks/LuckyTicket/ForTests/piter.txt";
             var result = AlgorithmChooser.GetAlgorithm(path);
 
-            Assert.True(result is PiterTicketAlgorithm);
+            Assert.IsAssignableFrom<PiterTicketAlgorithm>(result);
         }
 
         [Fact]
@@ -20,7 +20,7 @@ namespace LuckyTicket.Test
             string path = "C:/softserve/Tasks/LuckyTicket/ForTests/moskow.txt";
             var result = AlgorithmChooser.GetAlgorithm(path);
 
-            Assert.True(result is MoskowTicketAlgorithm);
+            Assert.IsAssignableFrom<MoskowTicketAlgorithm>(result);
         }
 
         [Fact]
