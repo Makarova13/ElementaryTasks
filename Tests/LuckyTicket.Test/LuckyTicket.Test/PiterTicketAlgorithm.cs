@@ -4,11 +4,11 @@ namespace LuckyTicket.Test
 {
     public class PiterTicketAlgorithmTest : IClassFixture<LuckyTicketFixture>
     {
-        private readonly PiterTicketAlgorithm piterAlgorithm;
+        private readonly LuckyTicketFixture algorithm;
 
-        public PiterTicketAlgorithmTest(PiterTicketAlgorithm piterTicket)
+        public PiterTicketAlgorithmTest(LuckyTicketFixture luckyTicketFixture)
         {
-            piterAlgorithm = piterTicket;
+            algorithm = luckyTicketFixture;
         }
     
         [Theory]
@@ -22,9 +22,7 @@ namespace LuckyTicket.Test
             Ticket ticket = new Ticket
             { Number = number };
 
-            var piterTicket = new PiterTicketAlgorithm();
-
-            piterTicket.CheckIfLucky(ticket);
+            algorithm.PiterAlgorithm.CheckIfLucky(ticket);
 
             Assert.True(ticket.IsLucky == expected);
         }

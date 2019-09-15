@@ -4,15 +4,15 @@ using System.Text;
 
 namespace LuckyTicket.Test
 {
-    class LuckyTicketFixture
+    public class LuckyTicketFixture
     {
-        public MoskowTicketAlgorithm moskowAlgorithm;
-        public PiterTicketAlgorithm piterAlgorithm;
+        public MoskowTicketAlgorithm MoskowAlgorithm { get; private set; }
+        public PiterTicketAlgorithm PiterAlgorithm { get; private set; }
 
         public LuckyTicketFixture()
         {
-            moskowAlgorithm = new MoskowTicketAlgorithm();
-            piterAlgorithm = new PiterTicketAlgorithm();
+            MoskowAlgorithm = new MoskowTicketAlgorithm();
+            PiterAlgorithm = new PiterTicketAlgorithm();
         }
     }
 }

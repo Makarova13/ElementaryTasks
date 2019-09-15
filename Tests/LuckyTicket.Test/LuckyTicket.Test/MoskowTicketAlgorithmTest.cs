@@ -4,11 +4,11 @@ namespace LuckyTicket.Test
 {
     public class MoskowTicketAlgorithmTest: IClassFixture<LuckyTicketFixture>
     {
-        private readonly MoskowTicketAlgorithm moskowAlgorithm;
+        private readonly LuckyTicketFixture algorithm;
 
-        public MoskowTicketAlgorithmTest(MoskowTicketAlgorithm moskowTicket)
+        public MoskowTicketAlgorithmTest(LuckyTicketFixture luckyTicketFixture)
         {
-            moskowAlgorithm = moskowTicket;
+            algorithm = luckyTicketFixture;
         }
 
         [Theory]
@@ -21,7 +21,7 @@ namespace LuckyTicket.Test
             Ticket ticket = new Ticket
             { Number = number };
 
-            moskowAlgorithm.CheckIfLucky(ticket);
+            algorithm.MoskowAlgorithm.CheckIfLucky(ticket);
 
             Assert.True(ticket.IsLucky == expected);
         }
