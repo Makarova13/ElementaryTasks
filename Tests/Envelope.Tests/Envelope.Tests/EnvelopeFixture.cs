@@ -1,10 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Validator;
 
 namespace Task2Envelope.Tests
 {
-    class EnvelopeFixture
+    public class EnvelopeFixture
     {
+        private IArgsValidator argsValidator;
+        private INumsValidator numsValidator;
+        public EnvelopeCreator Creator { get; private set; }
+
+        public EnvelopeFixture()
+        {
+            argsValidator = new ArgsValidator();
+            numsValidator = new NumsValidator();
+            Creator = new EnvelopeCreator(numsValidator, argsValidator);
+        }
     }
 }
