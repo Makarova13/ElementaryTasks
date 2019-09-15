@@ -62,7 +62,7 @@ namespace Task2Envelope
             }
             else
             {
-                throw new InvalidCastException(StringConsts.INVALID_CAST);
+                throw new InvalidCastException(Messages.ErrorInvalidCast);
             }
         }
     }

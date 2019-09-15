@@ -1,2 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Task2Envelope.Application">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAECAAAAAAEAI=</HashCode>
+      <FileName>Application.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UI" />
+      <Property Name="ValidatorArgs" />
+      <Property Name="ValidatorNums" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Task2Envelope.Messages" Collapsed="true">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABASCAAAAAQBAAAAAAAAAQAAIKIAAAIEBAACAAQAAA=</HashCode>
+      <FileName>Constants\Messages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task2Envelope.EnvelopeCreator">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQABAAAAAAAAAAACBAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnvelopeCreator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ArgsValidator" />
+      <Property Name="NumsValidator" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Task2Envelope.Envelope">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAgACAAkBAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Envelope.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Task2Envelope.Program">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="UserInterface.IUserInterface" Collapsed="true">
+    <Position X="1.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Validator.IArgsValidator" Collapsed="true">
+    <Position X="1.75" Y="2" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Validator.INumsValidator" Collapsed="true">
+    <Position X="1.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Enum Name="Outcomes">
+    <Position X="5.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAIAAEAAAA=</HashCode>
+      <FileName>Constants\Outcomes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

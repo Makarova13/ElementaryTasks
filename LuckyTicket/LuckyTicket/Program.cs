@@ -10,7 +10,7 @@ namespace LuckyTicket
 
         static void Main(string[] args)
         {
-            IUserInterface userInterface = new ConsoleUI();
+            var userInterface = new ConsoleUI();
 
             try
             {

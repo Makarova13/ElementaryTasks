@@ -10,6 +10,7 @@ namespace Task2Envelope
         #region properties
 
         private EnvelopeCreator Creator { get; set; }
+        private Messages Message { get; set; }
         private IUserInterface UI { get; }
         private IArgsValidator ValidatorArgs { get; }
         private INumsValidator ValidatorNums { get; }
@@ -28,7 +29,8 @@ namespace Task2Envelope
 
         public void Run(string[] args)
         {
-            Logger.Info(StringConsts.STARTED);
+            Logger.Info(Messages.Started);
+            Message = new Messages();
             Creator = new EnvelopeCreator(ValidatorNums, ValidatorArgs);
 
             if (args.Length == 4 && ValidatorArgs.ArgsAreFloat(args))
@@ -37,14 +39,14 @@ namespace Task2Envelope
             }
             else
             { 
-                UI.ShowMessage(StringConsts.INSTRUCTION);
-                UI.AskContinue(StringConsts.START_CONSOLE);
+                UI.ShowMessage(Messages.Instruction);
+                UI.AskContinue(Messages.StartConsole);
             }
 
             while (UI.WannaContinue)
             {
                 UI.Clear();
-                UI.ShowMessage(StringConsts.CONSOLE_INSTRUCTION);
+                UI.ShowMessage(Messages.ConsoleIntruction);
                 CheckEnvelopes(UI.ReadLine(), UI.ReadLine(),
                                UI.ReadLine(), UI.ReadLine());
             }
@@ -59,15 +61,15 @@ namespace Task2Envelope
                 Envelope en2 = Creator.CreateEnvelope(side1en2, side2en2);
 
                 Outcomes outcome = en1.TryPutIn(en2);
-                UI.ShowMessage(StringConsts.Messeges[outcome]);
+                UI.ShowMessage(Message.OutcomeMessage[outcome]);
 
-                UI.AskContinue(StringConsts.CONTINUE);
+                UI.AskContinue(Messages.Continue);
             }
             catch (FormatException ex)
             {
                 Logger.Error(ex, ex.Message);
                 UI.ShowMessage(ex.Message);
-                UI.AskContinue(StringConsts.CONTINUE);
+                UI.AskContinue(Messages.Continue);
             }
         }
     }

@@ -23,7 +23,7 @@
 
         public override string ToString()
         {
-            return Messages.MOSKOW_ALGORITHM;
+            return Messages.MoskowAlgorithm;
         }
     }
 }

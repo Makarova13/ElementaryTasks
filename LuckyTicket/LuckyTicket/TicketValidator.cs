@@ -8,12 +8,12 @@ namespace LuckyTicket
         {
             if (!int.TryParse(str, out int number))
             {
-                throw new FormatException(Messages.ERROR_FORMAT);
+                throw new FormatException(Messages.ErrorFormat);
             }
 
             if(str.Length != Ticket.NumberLength)
             {
-                throw new FormatException(Messages.ERROR_DIGITS_NUMBER);
+                throw new FormatException(Messages.ErrorDigitsNumber);
             }
 
             return number;

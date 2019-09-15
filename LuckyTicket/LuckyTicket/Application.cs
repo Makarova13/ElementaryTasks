@@ -20,14 +20,14 @@ namespace LuckyTicket
 
         private void Run()
         {
-            Logger.Info(Messages.STARTED);
+            Logger.Info(Messages.Started);
 
-            UI.ShowMessage(Messages.ENTER_PATH);
+            UI.ShowMessage(Messages.EnterPath);
             string path = UI.ReadLine();
 
             if (!File.Exists(path))
             {
-                throw new FileNotFoundException(Messages.ERROR_WRONG_PATH);
+                throw new FileNotFoundException(Messages.ErrorWrongPath);
             }
 
             try
@@ -35,7 +35,7 @@ namespace LuckyTicket
                 var algorithm = AlgorithmChooser.GetAlgorithm(path);
                 GetMinAndMax(out int min, out int max);
 
-                TicketsAnalyser ticketsAnalyser = new TicketsAnalyser(
+                var ticketsAnalyser = new TicketsAnalyser(
                        algorithm, Logger);
 
                 ticketsAnalyser.CheckAll(min, max);
@@ -56,10 +56,10 @@ namespace LuckyTicket
             min = 0;
             max = 0;
 
-            UI.ShowMessage(Messages.ENTER_MIN);
+            UI.ShowMessage(Messages.EnterMin);
             min = TicketValidator.ValidateRange(UI.ReadLine());
 
-            UI.ShowMessage(Messages.ENTER_MAX);
+            UI.ShowMessage(Messages.EnterMax);
             max = TicketValidator.ValidateRange(UI.ReadLine());
 
             if (max < min)

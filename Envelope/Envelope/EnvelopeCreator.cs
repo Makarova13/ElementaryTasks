@@ -28,12 +28,12 @@ namespace Task2Envelope
         {
             if (!float.TryParse(arg, out float result))
             {
-                throw new FormatException(StringConsts.WRONG_FORMAT_ERROR);
+                throw new FormatException(Messages.ErrorWrongFormat);
             }
 
             else if (!NumsValidator.IsPositive(result))
             {
-                throw new FormatException(StringConsts.NEGATIVE_NUM_ERROR);
+                throw new FormatException(Messages.ErrorNegativeNumber);
             }
 
             return result;

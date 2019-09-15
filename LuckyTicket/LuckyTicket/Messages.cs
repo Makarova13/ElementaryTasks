@@ -10,27 +10,27 @@ namespace LuckyTicket
     {
         #region messages
 
-        public const string ENTER_PATH = "Please enter path to the file with algorithm:";
-        public const string ENTER_MIN = "Please enter minimum ticket number:";
-        public const string ENTER_MAX = "Please enter maximum ticket number:";
+        public const string EnterPath = "Please enter path to the file with algorithm:";
+        public const string EnterMin = "Please enter minimum ticket number:";
+        public const string EnterMax = "Please enter maximum ticket number:";
 
         #endregion
 
         #region errors
 
-        public const string ERROR_FORMAT = "Min and Max must contain only digits.";
-        public readonly static string ERROR_DIGITS_NUMBER = $"The ticket must have {Ticket.NumberLength} characters.";
-        public const string ERROR_WRONG_PATH = "Wrong path.";
-        public const string ERROR_NO_ALGORITHM = "The first line of file must be the type of ticket('Piter' or 'Moskow')";
+        public const string ErrorFormat = "Min and Max must contain only digits.";
+        public readonly static string ErrorDigitsNumber = $"The ticket must have {Ticket.NumberLength} characters.";
+        public const string ErrorWrongPath = "Wrong path.";
+        public const string ErrorNoAlgorithm = "The first line of file must be the type of ticket('Piter' or 'Moskow')";
 
         #endregion
 
         #region Logger messages
 
-        public const string STARTED = "Application started";
-        public const string TICKETS_ANALYSER = "Tickets analyser created. Algorythm: ";
-        public const string MOSKOW_ALGORITHM = "Moskow ticket algorithm has been chosen.";
-        public const string PITER_ALGORITHM = "Piter ticket algorithm has been chosen.";
+        public const string Started = "Application started";
+        public const string TicketsAnalyser = "Tickets analyser created. Algorythm: ";
+        public const string MoskowAlgorithm = "Moskow ticket algorithm has been chosen.";
+        public const string PiterAlgorithm = "Piter ticket algorithm has been chosen.";
 
         #endregion
 

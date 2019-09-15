@@ -24,7 +24,7 @@
 
         public override string ToString()
         {
-            return Messages.PITER_ALGORITHM;
+            return Messages.PiterAlgorithm;
         }
     }
 }

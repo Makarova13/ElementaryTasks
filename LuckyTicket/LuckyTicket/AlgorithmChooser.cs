@@ -11,7 +11,7 @@ namespace LuckyTicket
             {
                 if(!Enum.TryParse(file.ReadLine(), out TicketType ticketType))
                 {
-                    throw new FormatException(Messages.ERROR_NO_ALGORITHM);
+                    throw new FormatException(Messages.ErrorNoAlgorithm);
                 }
 
                 switch (ticketType)
@@ -23,7 +23,7 @@ namespace LuckyTicket
                         return new PiterTicketAlgorithm();
 
                     default:
-                        throw new FormatException(Messages.ERROR_NO_ALGORITHM);
+                        throw new FormatException(Messages.ErrorNoAlgorithm);
                 }
             }
         }

@@ -10,9 +10,9 @@ namespace Task2Envelope
 
         static void Main(string[] args)
         {
-            IUserInterface UI = new ConsoleUI();
-            IArgsValidator argsValidator = new ArgsValidator();
-            INumsValidator numsValidator = new NumsValidator();
+            var UI = new ConsoleUI();
+            var argsValidator = new ArgsValidator();
+            var numsValidator = new NumsValidator();
 
             new Application(UI, logger, argsValidator, numsValidator).Run(args);          
         }

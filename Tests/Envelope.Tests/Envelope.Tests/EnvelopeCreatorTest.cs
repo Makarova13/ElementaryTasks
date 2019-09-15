@@ -13,8 +13,8 @@ namespace Task2Envelope.Tests
         [InlineData("L", "K")]
         public void TestCreateEnvelope(string a, string b)
         {
-            INumsValidator numsValidator = new NumsValidator();
-            IArgsValidator argsValidator = new ArgsValidator();
+            var numsValidator = new NumsValidator();
+            var argsValidator = new ArgsValidator();
 
 
             EnvelopeCreator creator = new EnvelopeCreator(numsValidator, argsValidator);

@@ -14,7 +14,7 @@ namespace LuckyTicket
 
         public TicketsAnalyser(ICheckIfLucky checkIfLucky, ILogger logger)
         {
-            logger.Info(Messages.TICKETS_ANALYSER, checkIfLucky.ToString());
+            logger.Info(Messages.TicketsAnalyser, checkIfLucky.ToString());
             Algorithm = checkIfLucky;
         }
 
@@ -25,7 +25,7 @@ namespace LuckyTicket
 
         public void CheckAll(int min, int max)
         {
-            Ticket ticket = new Ticket();
+            var ticket = new Ticket();
 
             for (int i = min; i <= max; i++)
             {
