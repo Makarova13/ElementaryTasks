@@ -2,9 +2,9 @@ using Xunit;
 
 namespace LuckyTicket.Test
 {
-    public class PiterTicketAlgorithmTest : IClassFixture<PiterTicketAlgorithm>
+    public class PiterTicketAlgorithmTest : IClassFixture<LuckyTicketFixture>
     {
-        PiterTicketAlgorithm piterAlgorithm;
+        private readonly PiterTicketAlgorithm piterAlgorithm;
 
         public PiterTicketAlgorithmTest(PiterTicketAlgorithm piterTicket)
         {
