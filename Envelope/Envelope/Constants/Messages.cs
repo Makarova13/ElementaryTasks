@@ -29,7 +29,6 @@ To work from console, enter the length and width separeted by enter.";
         #region logger messages
 
         public const string Started = "Application started.";
-        public const string CREATOR = "Envelope creator created.";
 
         #endregion
 
