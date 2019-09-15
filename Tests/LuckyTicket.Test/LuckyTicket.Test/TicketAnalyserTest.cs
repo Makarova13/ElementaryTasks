@@ -4,7 +4,7 @@ namespace LuckyTicket.Test
 {
     public class TicketAnalyserTest
     {
-        const int AmountOfLuckyInMaxRange = 55252;
+        private const int AmountOfLuckyInMaxRange = 55252;
         
         [Fact]
         public void CheckAll_WithMaxRangeWithPiterAlgorithm_ShouldReturnExpectedAmount()

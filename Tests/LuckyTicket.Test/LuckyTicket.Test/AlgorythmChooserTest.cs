@@ -6,7 +6,7 @@ namespace LuckyTicket.Test
     public class AlgorythmChooserTest
     {
         [Fact]
-        public void GetAlgorithm_FromFile_PiterType()
+        public void GetAlgorithm_FromFile_ShouldReturnPiterType()
         {
             string path = "C:/softserve/Tasks/LuckyTicket/ForTests/piter.txt";
             var result = AlgorithmChooser.GetAlgorithm(path);
@@ -15,7 +15,7 @@ namespace LuckyTicket.Test
         }
 
         [Fact]
-        public void GetAlgorithm_FromFile_MoskowType()
+        public void GetAlgorithm_FromFile_ShouldReturnMoskowType()
         {
             string path = "C:/softserve/Tasks/LuckyTicket/ForTests/moskow.txt";
             var result = AlgorithmChooser.GetAlgorithm(path);
@@ -24,7 +24,7 @@ namespace LuckyTicket.Test
         }
 
         [Fact]
-        public void GetAlgorithm_FromFile_None()
+        public void GetAlgorithm_FromFile_ShouldThrowException()
         {
             string path = "C:/softserve/Tasks/LuckyTicket/ForTests/noType.txt";
             Assert.Throws<FormatException>(() => AlgorithmChooser.GetAlgorithm(path));

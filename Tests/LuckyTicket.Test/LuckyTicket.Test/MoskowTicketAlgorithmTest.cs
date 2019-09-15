@@ -4,7 +4,7 @@ namespace LuckyTicket.Test
 {
     public class MoskowTicketAlgorithmTest: IClassFixture<MoskowTicketAlgorithm>
     {
-        MoskowTicketAlgorithm moskowAlgorithm;
+        private MoskowTicketAlgorithm moskowAlgorithm;
 
         public MoskowTicketAlgorithmTest(MoskowTicketAlgorithm moskowTicket)
         {

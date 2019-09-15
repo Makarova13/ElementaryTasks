@@ -5973,11 +5973,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\softserve\\Tasks\\LuckyTicket.Test\\LuckyTicket.Test\\LuckyTicket.Test.csproj",
+      "projectUniqueName": "C:\\softserve\\Tasks\\Tests\\LuckyTicket.Test\\LuckyTicket.Test\\LuckyTicket.Test.csproj",
       "projectName": "LuckyTicket.Test",
-      "projectPath": "C:\\Users\\user\\softserve\\Tasks\\LuckyTicket.Test\\LuckyTicket.Test\\LuckyTicket.Test.csproj",
+      "projectPath": "C:\\softserve\\Tasks\\Tests\\LuckyTicket.Test\\LuckyTicket.Test\\LuckyTicket.Test.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\softserve\\Tasks\\LuckyTicket.Test\\LuckyTicket.Test\\obj\\",
+      "outputPath": "C:\\softserve\\Tasks\\Tests\\LuckyTicket.Test\\LuckyTicket.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
